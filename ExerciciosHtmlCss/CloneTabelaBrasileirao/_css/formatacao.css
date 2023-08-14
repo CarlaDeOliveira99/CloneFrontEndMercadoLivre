@@ -1,0 +1,174 @@
+body {
+    background-color: #171717;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+nav {
+    background-color: #10502F;
+    margin-top: -16px;
+
+}
+
+ul{
+    text-align: center;
+   padding-top: 69px;
+
+}
+
+
+li {
+    display: inline-block;
+    margin-right: 50px;
+    padding: 12px 15px 10px 15px;
+}
+
+
+li#selecionado{
+    border-bottom: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+
+a {
+    color: #B1B2B1;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+}
+
+li:hover{
+    background-color: #286244;
+    transition: background-color ;
+}
+
+table {
+    margin: auto;
+    border-collapse:collapse;
+    border-bottom:1px solid #B1B2B1; 
+    
+}
+
+.simbolo img {
+   height: 20px; 
+}
+
+
+
+caption {
+    background-color: #303134;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    color: #B1B2B1;
+    text-align: left;
+    padding: 15px;
+    width: 750px;
+}
+
+p#ano{
+    font-family: Arial, sans-serif;
+    color: #4487F6;
+    text-align: left;
+    padding: 0px 15px;
+}
+
+thead {
+    background-color: #202124;
+}
+
+
+tr#cabecalho {
+    color: #BDC1C6;
+    font-size: 11px;
+}
+
+tr {
+    font-family: Arial, sans-serif;
+    color: #ededed;
+    font-size: 12px;
+}
+
+tr:hover{
+    background-color: #303134;
+    transition: background-color ;
+}
+
+
+.ultimaIgm{
+    padding-right: 20px;
+}
+
+.imgCirculo{
+    padding-left: 15px;
+}
+
+.valores{
+    padding-right: 20px;
+}
+
+td{
+    border-bottom:1px solid #B1B2B1;
+}
+
+
+
+.colunaTexto{
+    padding-right: 28px;
+}
+
+.primeiraColuna{
+    padding: 12px 180px 12px 15px ;
+}
+
+.textoFinal{
+    padding-right: 250px;
+}
+
+.time1{
+  border-left: 3px solid #4285F4;
+  padding-left: 15px;
+}
+
+.time2{
+    border-left: 3px solid #FA7B17;
+    padding-left: 15px;
+  }
+
+  .time3{
+    border-left: 3px solid #34A853;
+    padding-left: 15px;
+  }
+
+  
+  .time4{
+    border-left: 3px solid #202124;
+    padding-left: 15px;
+  }
+
+  .time5{
+    border-left: 3px solid #EA4335;
+    padding-left: 15px;
+  }
+
+.nomeTime{
+    padding-right: 246px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+
+tbody{
+    background-color: #202124;
+}
+
+div{
+    background-color: #424548;
+    margin: 23px 25px 25px 21px;
+}
+div h1{
+    color: #BDC1C6;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+div#informacoes
