@@ -12,7 +12,9 @@
 </head>
 
 <body>
-        <nav>
+
+        <!--Barra de navegação-->
+        <div id="barradenavegacao">
                 <ul>
                         <li>
                                 <a href="https://www.google.com/search?q=tabela+do+brasileirao&oq=tabela+do+&gs_lcrp=EgZjaHJvbWUqBggBEAAYAzIGCAAQRRg5MgYIARAAGAMyCggCEAAYsQMYgAQyBwgDEAAYgAQyBwgEEAAYgAQyBwgFEAAYgAQyCggGEAAYsQMYgAQyBggHEEUYQdIBCDM3MjdqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#cobssid=s&sie=lg;/g/11jspy1hvm;2;/m/0fnk7q;mt;fp;1;;;"
@@ -34,36 +36,39 @@
                                         target="_blank">JOGADORES</a>
                         </li>
                 </ul>
-        </nav>
+        </div>
 
-        <!--tr(definir uma linha dentro de uma tabela)
-                td(definir uma coluna dentro de uma tabela)
-                th(definir a coluna do cabeçalho da tabela)
-                <tfoot> rodape
-                <caption> é utilizado para adicionar um título ou legenda à tabela
-                -->
-
+        <!--Tabela que contem os titulos-->
         <table>
-                <caption>Temporada
-                        <p id="ano">2023</p>
+                <caption>
+                        <p id="tituloTemporada">Temporada</p>
+                        <select name="ano" id="ano">
+                                <option value="ano1">2023</option>
+                                <option value="ano1">2022</option>
+                                <option value="ano1">2021</option>
+                                <option value="ano1">2020</option>
+                                <option value="ano1">2019</option>
+                                <option value="ano1">2018</option>
+                                <option value="ano1">2017</option>
+                        </select>
                 </caption>
                 <thead><!--demilitar area de cabeçalho da tabela-->
                         <tr id="cabecalho">
                                 <td class="primeiraColuna">Clube</td>
-                                <td>Pts</td>
-                                <td>Pts</td>
-                                <td>Pj</td>
-                                <td>VIT</td>
-                                <td> E</td>
-                                <td>DER</td>
-                                <td>GM</td>
-                                <td>GC</td>
-                                <td class="colunaTexto">SG</td>
-                                <td>Últimas 5</td>
+                                <td class="txt">Pts</td>
+                                <td class="txt">Pts</td>
+                                <td class="txt">Pj</td>
+                                <td class="txt">VIT</td>
+                                <td class="txt"> E</td>
+                                <td class="txt">DER</td>
+                                <td class="txt">GM</td>
+                                <td class="txt">GC</td>
+                                <td class=" txt penultimaColuna">SG</td>
+                                <td class="txt ultimaColuna">Últimas 5</td>
                         </tr>
                 </thead>
         </table>
-
+        <!--Tabela que contem os dados-->
         <table>
                 <tbody><!--area da tabela destinada aos dados sera exibido-->
                         <td class="time1">1</td>
@@ -79,8 +84,7 @@
                         <td class="valores">11</td>
                         <td class="valores">24</td>
 
-                        <td class="imgCirculo"><img
-                                        src="../_imagem/BolinhaVerde.svg" />
+                        <td class="imgCirculo"><img src="../_imagem/BolinhaVerde.svg" />
                         </td>
                         <td><img src="../_imagem/BolinhaCinza.svg" />
                         </td>
@@ -88,8 +92,7 @@
                         </td>
                         <td><img src="../_imagem/BolinhaCinza.svg" />
                         </td>
-                        <td class="ultimaIgm"><img
-                                        src="../_imagem/BolinhaVerde.svg" />
+                        <td class="ultimaIgm"><img src="../_imagem/BolinhaVerde.svg" />
                         </td>
                         <tr>
                                 <td class="time1">2</td>
@@ -104,8 +107,7 @@
                                 <td class="valores">28</td>
                                 <td class="valores">23</td>
                                 <td class="valores">5</td>
-                                <td class="imgCirculo"><img
-                                                src="../_imagem/BolinhaVerde.svg" />
+                                <td class="imgCirculo"><img src="../_imagem/BolinhaVerde.svg" />
                                 </td>
                                 <td><img src="../_imagem/BolinhaVermelha.svg" />
                                 </td>
@@ -113,8 +115,7 @@
                                 </td>
                                 <td><img src="../_imagem/BolinhaVerde.svg" />
                                 </td>
-                                <td class="ultimaIgm"><img
-                                                src="../_imagem/BolinhaVermelha.svg" />
+                                <td class="ultimaIgm"><img src="../_imagem/BolinhaVermelha.svg" />
                                 </td>
                         </tr>
                         <tr>
@@ -130,8 +131,7 @@
                                 <td class="valores">31</td>
                                 <td class="valores">24</td>
                                 <td class="valores">7</td>
-                                <td class="imgCirculo"><img
-                                                src="../_imagem/BolinhaCinza.svg" />
+                                <td class="imgCirculo"><img src="../_imagem/BolinhaCinza.svg" />
                                 </td>
                                 <td><img src="../_imagem/BolinhaVermelha.svg" />
                                 </td>
@@ -139,8 +139,7 @@
                                 </td>
                                 <td><img src="../_imagem/BolinhaCinza.svg" />
                                 </td>
-                                <td class="ultimaIgm"><img
-                                                src="../_imagem/BolinhaCinza.svg" />
+                                <td class="ultimaIgm"><img src="../_imagem/BolinhaCinza.svg" />
                                 </td>
                         </tr>
                         <tr>
@@ -156,8 +155,7 @@
                                 <td class="valores">25</td>
                                 <td class="valores">19</td>
                                 <td class="valores">6</td>
-                                <td class="imgCirculo"><img
-                                                src="../_imagem/BolinhaVermelha.svg" />
+                                <td class="imgCirculo"><img src="../_imagem/BolinhaVermelha.svg" />
                                 </td>
                                 <td><img src="../_imagem/BolinhaVerde.svg" />
                                 </td>
@@ -165,8 +163,7 @@
                                 </td>
                                 <td><img src="../_imagem/BolinhaVermelha.svg" />
                                 </td>
-                                <td class="ultimaIgm"><img
-                                                src="../_imagem/BolinhaCinza.svg" />
+                                <td class="ultimaIgm"><img src="../_imagem/BolinhaCinza.svg" />
                                 </td>
                         </tr>
                         <tr>
@@ -182,8 +179,7 @@
                                 <td class="valores">33</td>
                                 <td class="valores">17</td>
                                 <td class="valores">16</td>
-                                <td class="imgCirculo"><img
-                                                src="../_imagem/BolinhaVermelha.svg" />
+                                <td class="imgCirculo"><img src="../_imagem/BolinhaVermelha.svg" />
                                 </td>
                                 <td><img src="../_imagem/BolinhaVerde.svg" />
                                 </td>
@@ -191,8 +187,7 @@
                                 </td>
                                 <td><img src="../_imagem/BolinhaCinza.svg" />
                                 </td>
-                                <td class="ultimaIgm"><img
-                                                src="../_imagem/BolinhaCinza.svg" />
+                                <td class="ultimaIgm"><img src="../_imagem/BolinhaCinza.svg" />
                                 </td>
                         </tr>
                         <tr>
@@ -208,8 +203,7 @@
                                 <td class="valores">26</td>
                                 <td class="valores">16</td>
                                 <td class="valores">10</td>
-                                <td class="imgCirculo"><img
-                                                src="../_imagem/BolinhaVerde.svg" />
+                                <td class="imgCirculo"><img src="../_imagem/BolinhaVerde.svg" />
                                 </td>
                                 <td><img src="../_imagem/BolinhaVerde.svg" />
                                 </td>
@@ -217,11 +211,10 @@
                                 </td>
                                 <td><img src="../_imagem/BolinhaVermelha.svg" />
                                 </td>
-                                <td class="ultimaIgm"><img
-                                                src="../_imagem/BolinhaCinza.svg" />
+                                <td class="ultimaIgm"><img src="../_imagem/BolinhaCinza.svg" />
                                 </td>
                         </tr>
-                        
+
                         <tr>
                                 <td class="time3">7</td>
                                 <td class="simbolo"><img src="../_imagem/Athletico-PR.png" />
@@ -235,8 +228,7 @@
                                 <td class="valores">26</td>
                                 <td class="valores">22</td>
                                 <td class="valores">4</td>
-                                <td class="imgCirculo"><img
-                                                src="../_imagem/BolinhaCinza.svg" />
+                                <td class="imgCirculo"><img src="../_imagem/BolinhaCinza.svg" />
                                 </td>
                                 <td><img src="../_imagem/BolinhaCinza.svg" />
                                 </td>
@@ -244,8 +236,7 @@
                                 </td>
                                 <td><img src="../_imagem/BolinhaVerde.svg" />
                                 </td>
-                                <td class="ultimaIgm"><img
-                                                src="../_imagem/BolinhaVermelha.svg" />
+                                <td class="ultimaIgm"><img src="../_imagem/BolinhaVermelha.svg" />
                                 </td>
                         </tr>
                         <tr>
@@ -261,8 +252,7 @@
                                 <td class="valores">21</td>
                                 <td class="valores">19</td>
                                 <td class="valores">2</td>
-                                <td class="imgCirculo"><img
-                                                src="../_imagem/BolinhaVerde.svg" />
+                                <td class="imgCirculo"><img src="../_imagem/BolinhaVerde.svg" />
                                 </td>
                                 <td><img src="../_imagem/BolinhaVerde.svg" />
                                 </td>
@@ -270,8 +260,7 @@
                                 </td>
                                 <td><img src="../_imagem/BolinhaVerde.svg" />
                                 </td>
-                                <td class="ultimaIgm"><img
-                                                src="../_imagem/BolinhaCinza.svg" />
+                                <td class="ultimaIgm"><img src="../_imagem/BolinhaCinza.svg" />
                                 </td>
                         </tr>
                         <tr>
@@ -287,8 +276,7 @@
                                 <td class="valores">24</td>
                                 <td class="valores">19</td>
                                 <td class="valores">5</td>
-                                <td class="imgCirculo"><img
-                                                src="../_imagem/BolinhaCinza.svg" />
+                                <td class="imgCirculo"><img src="../_imagem/BolinhaCinza.svg" />
                                 </td>
                                 <td><img src="../_imagem/BolinhaVermelha.svg" />
                                 </td>
@@ -296,8 +284,7 @@
                                 </td>
                                 <td><img src="../_imagem/BolinhaVermelha.svg" />
                                 </td>
-                                <td class="ultimaIgm"><img
-                                                src="../_imagem/BolinhaVerde.svg" />
+                                <td class="ultimaIgm"><img src="../_imagem/BolinhaVerde.svg" />
                                 </td>
                         </tr>
                         <tr>
@@ -322,8 +309,7 @@
                                 </td>
                                 <td><img src="../_imagem/BolinhaVermelha.svg" />
                                 </td>
-                                <td class="ultimaIgm"><img
-                                                src="../_imagem/BolinhaCinza.svg" />
+                                <td class="ultimaIgm"><img src="../_imagem/BolinhaCinza.svg" />
                                 </td>
                         </tr>
                         <tr>
@@ -340,8 +326,7 @@
                                 <td class="valores">21</td>
                                 <td class="valores">19</td>
                                 <td class="valores">-2</td>
-                                <td class="imgCirculo"><img
-                                                src="../_imagem/BolinhaVerde.svg" />
+                                <td class="imgCirculo"><img src="../_imagem/BolinhaVerde.svg" />
                                 </td>
                                 <td><img src="../_imagem/BolinhaVermelha.svg" />
                                 </td>
@@ -349,8 +334,7 @@
                                 </td>
                                 <td><img src="../_imagem/BolinhaVermelha.svg" />
                                 </td>
-                                <td class="ultimaIgm"><img
-                                                src="../_imagem/BolinhaVermelha.svg" />
+                                <td class="ultimaIgm"><img src="../_imagem/BolinhaVermelha.svg" />
                                 </td>
                         </tr>
                         <tr>
@@ -367,8 +351,7 @@
                                 <td class="valores">19</td>
                                 <td class="valores">15</td>
                                 <td class="valores">4</td>
-                                <td class="imgCirculo"><img
-                                                src="../_imagem/BolinhaCinza.svg" />
+                                <td class="imgCirculo"><img src="../_imagem/BolinhaCinza.svg" />
                                 </td>
                                 <td><img src="../_imagem/BolinhaCinza.svg" />
                                 </td>
@@ -376,8 +359,7 @@
                                 </td>
                                 <td><img src="../_imagem/BolinhaCinza.svg" />
                                 </td>
-                                <td class="ultimaIgm"><img
-                                                src="../_imagem/BolinhaVerde.svg" />
+                                <td class="ultimaIgm"><img src="../_imagem/BolinhaVerde.svg" />
                                 </td>
                         </tr>
                         <tr>
@@ -394,8 +376,7 @@
                                 <td class="valores">17</td>
                                 <td class="valores">23</td>
                                 <td class="valores">-6</td>
-                                <td class="imgCirculo"><img
-                                                src="../_imagem/BolinhaVermelha.svg" />
+                                <td class="imgCirculo"><img src="../_imagem/BolinhaVermelha.svg" />
                                 </td>
                                 <td><img src="../_imagem/BolinhaCinza.svg" />
                                 </td>
@@ -403,8 +384,7 @@
                                 </td>
                                 <td><img src="../_imagem/BolinhaCinza.svg" />
                                 </td>
-                                <td class="ultimaIgm"><img
-                                                src="../_imagem/BolinhaCinza.svg" />
+                                <td class="ultimaIgm"><img src="../_imagem/BolinhaCinza.svg" />
                                 </td>
                         </tr>
                         <tr>
@@ -421,8 +401,7 @@
                                 <td class="valores">20</td>
                                 <td class="valores">21</td>
                                 <td class="valores">-1</td>
-                                <td class="imgCirculo"><img
-                                                src="../_imagem/BolinhaVerde.svg" />
+                                <td class="imgCirculo"><img src="../_imagem/BolinhaVerde.svg" />
                                 </td>
                                 <td><img src="../_imagem/BolinhaCinza.svg" />
                                 </td>
@@ -430,8 +409,7 @@
                                 </td>
                                 <td><img src="../_imagem/BolinhaCinza.svg" />
                                 </td>
-                                <td class="ultimaIgm"><img
-                                                src="../_imagem/BolinhaVerde.svg" />
+                                <td class="ultimaIgm"><img src="../_imagem/BolinhaVerde.svg" />
                                 </td>
                         </tr>
                         <tr>
@@ -448,8 +426,7 @@
                                 <td class="valores">18</td>
                                 <td class="valores">27</td>
                                 <td class="valores">-9</td>
-                                <td class="imgCirculo"><img
-                                                src="../_imagem/BolinhaVerde.svg" />
+                                <td class="imgCirculo"><img src="../_imagem/BolinhaVerde.svg" />
                                 </td>
                                 <td><img src="../_imagem/BolinhaVerde.svg" />
                                 </td>
@@ -457,8 +434,7 @@
                                 </td>
                                 <td><img src="../_imagem/BolinhaVerde.svg" />
                                 </td>
-                                <td class="ultimaIgm"><img
-                                                src="../_imagem/BolinhaCinza.svg" />
+                                <td class="ultimaIgm"><img src="../_imagem/BolinhaCinza.svg" />
                                 </td>
                         </tr>
                         <tr>
@@ -475,8 +451,7 @@
                                 <td class="valores">18</td>
                                 <td class="valores">25</td>
                                 <td class="valores">-7</td>
-                                <td class="imgCirculo"><img
-                                                src="../_imagem/BolinhaVermelha.svg" />
+                                <td class="imgCirculo"><img src="../_imagem/BolinhaVermelha.svg" />
                                 </td>
                                 <td><img src="../_imagem/BolinhaVerde.svg" />
                                 </td>
@@ -484,8 +459,7 @@
                                 </td>
                                 <td><img src="../_imagem/BolinhaCinza.svg" />
                                 </td>
-                                <td class="ultimaIgm"><img
-                                                src="../_imagem/BolinhaVermelha.svg" />
+                                <td class="ultimaIgm"><img src="../_imagem/BolinhaVermelha.svg" />
                                 </td>
                         </tr>
                         <tr>
@@ -501,8 +475,7 @@
                                 <td class="valores">19</td>
                                 <td class="valores">31</td>
                                 <td class="valores">-12</td>
-                                <td class="imgCirculo"><img
-                                                src="../_imagem/BolinhaVermelha.svg" />
+                                <td class="imgCirculo"><img src="../_imagem/BolinhaVermelha.svg" />
                                 </td>
                                 <td><img src="../_imagem/BolinhaCinza.svg" />
                                 </td>
@@ -510,8 +483,7 @@
                                 </td>
                                 <td><img src="../_imagem/BolinhaCinza.svg" />
                                 </td>
-                                <td class="ultimaIgm"><img
-                                                src="../_imagem/BolinhaVermelha.svg" />
+                                <td class="ultimaIgm"><img src="../_imagem/BolinhaVermelha.svg" />
                                 </td>
                         </tr>
                         <tr>
@@ -527,8 +499,7 @@
                                 <td class="valores">18</td>
                                 <td class="valores">36</td>
                                 <td class="valores">-18</td>
-                                <td class="imgCirculo"><img
-                                                src="../_imagem/BolinhaVermelha.svg" />
+                                <td class="imgCirculo"><img src="../_imagem/BolinhaVermelha.svg" />
                                 </td>
                                 <td><img src="../_imagem/BolinhaVermelha.svg" />
                                 </td>
@@ -536,8 +507,7 @@
                                 </td>
                                 <td><img src="../_imagem/BolinhaVerde.svg" />
                                 </td>
-                                <td class="ultimaIgm"><img
-                                                src="../_imagem/BolinhaCinza.svg" />
+                                <td class="ultimaIgm"><img src="../_imagem/BolinhaCinza.svg" />
                                 </td>
                         </tr>
                         <tr>
@@ -553,8 +523,7 @@
                                 <td class="valores">13</td>
                                 <td class="valores">28</td>
                                 <td class="valores">-15</td>
-                                <td class="imgCirculo"><img
-                                                src="../_imagem/BolinhaVerde.svg" />
+                                <td class="imgCirculo"><img src="../_imagem/BolinhaVerde.svg" />
                                 </td>
                                 <td><img src="../_imagem/BolinhaVermelha.svg" />
                                 </td>
@@ -562,34 +531,58 @@
                                 </td>
                                 <td><img src="../_imagem/BolinhaVermelha.svg" />
                                 </td>
-                                <td class="ultimaIgm"><img
-                                                src="../_imagem/BolinhaVermelha.svg" />
+                                <td class="ultimaIgm"><img src="../_imagem/BolinhaVermelha.svg" />
                                 </td>
                         </tr>
                         <tr>
-                                <td class="time5">20</td>
-                                <td class="simbolo"><img src="../_imagem/américa-MG.png" />
+                                <td class="time5 semBordaTabela">20</td>
+                                <td class="simbolo semBordaTabela"><img src="../_imagem/américa-MG.png" />
                                 </td>
-                                <td class="nomeTime">América-MG</td>
-                                <td class="valores">10</td>
-                                <td class="valores">18</td>
-                                <td class="valores">2</td>
-                                <td class="valores">4</td>
-                                <td class="valores">12</td>
-                                <td class="valores">19</td>
-                                <td class="valores">41</td>
-                                <td class="valores">-22</td>
-                                <td class="imgCirculo"><img
-                                                src="../_imagem/BolinhaVermelha.svg" />
+                                <td class="nomeTime semBordaTabela">América-MG</td>
+                                <td class="valores semBordaTabela">10</td>
+                                <td class="valores semBordaTabela">18</td>
+                                <td class="valores semBordaTabela">2</td>
+                                <td class="valores semBordaTabela">4</td>
+                                <td class="valores semBordaTabela">12</td>
+                                <td class="valores semBordaTabela">19</td>
+                                <td class="valores semBordaTabela">41</td>
+                                <td class="valores semBordaTabela">-22</td>
+                                <td class="imgCirculo semBordaTabela"><img src="../_imagem/BolinhaVermelha.svg" />
                                 </td>
-                                <td><img src="../_imagem/BolinhaVermelha.svg" />
+                                <td class="semBordaTabela"><img src="../_imagem/BolinhaVermelha.svg" />
                                 </td>
-                                <td><img src="../_imagem/BolinhaVermelha.svg" />
+                                <td class="semBordaTabela"><img src="../_imagem/BolinhaVermelha.svg" />
                                 </td>
-                                <td><img src="../_imagem/BolinhaCinza.svg" />
+                                <td class="semBordaTabela"><img src="../_imagem/BolinhaCinza.svg" />
                                 </td>
-                                <td class="ultimaIgm"><img
-                                                src="../_imagem/BolinhaVermelha.svg" />
+                                <td class="ultimaIgm semBordaTabela"><img src="../_imagem/BolinhaVermelha.svg" />
+                                </td>
+                        </tr>
+                        <!--Legenda abaixo da tabela-->
+                        <tr>
+                                <td id="areaLegenda" colspan="17">
+                                        <div id="legenda">
+                                                <div id="legendaQualificacao">
+                                                        <p class="txtTitulo">Qualificação/Rebaixamento</p>
+                                                        <div id="checkAzul"></div>
+                                                        <p class="txt">Fase de grupos da Copa Libertadores</p>
+                                                        <div id="checkLaranja"></div>
+                                                        <p class="txt">Qualificatórias da Copa Libertadores</p>
+                                                        <div id="checkVerde"></div>
+                                                        <p class="txt">Fase de grupos da Copa Sul-Americana</p>
+                                                        <div id="checkVermelho"></div>
+                                                        <p class="txt">Rebaixamento</p>
+                                                </div>
+                                                <div id="ultimasPartidas">
+                                                        <p class="txtTitulo">Últimas 5 partidas</p>
+                                                        <img class="imgBolinha" src="../_imagem/BolinhaVerde.svg">
+                                                        <p class="txt">Vitórias</p>
+                                                        <img class="imgBolinha" src="../_imagem/BolinhaCinza.svg">
+                                                        <p class="txt">Empates</p>
+                                                        <img class="imgBolinha" src="../_imagem/BolinhaVermelha.svg">
+                                                        <p class="txt">Derrota</p>
+                                                </div>
+                                        </div>
                                 </td>
                         </tr>
                 </tbody>
