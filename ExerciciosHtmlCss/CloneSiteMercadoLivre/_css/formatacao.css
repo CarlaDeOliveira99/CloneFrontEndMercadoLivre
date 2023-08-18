@@ -11,6 +11,13 @@ body {
 
 }
 
+
+.larguraPadrao {
+    background-color: #cad100;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
 /*carrossel*/
 
 #carrossel {
@@ -172,9 +179,9 @@ sup {
     border: none;
     padding: 2px 5px;
     margin-left: 20px;
+    cursor: pointer;
 
 }
-
 
 
 /*titulo levis*/
@@ -211,7 +218,7 @@ sup {
     height: 300px;
     width: 299.8px;
     float: left;
-    margin-left:20px;
+    margin-left: 20px;
 }
 
 .imgCardMedio {
@@ -235,26 +242,27 @@ sup {
 
 /*beleza e cuidado pessoal*/
 
-.produtosBeleza{
+.produtosBeleza {
     height: 368px;
 }
 
-.maisLargo{
+.maisLargo {
     width: 400px;
     margin-left: 20px;
 }
-.imgCardLargo{
+
+.imgCardLargo {
     width: 400px;
 }
 
-.descoBElezaCuidado{
+.descoBElezaCuidado {
     margin-left: 130px;
 }
 
 /* cards redondo categorias*/
 
-.cardRedondo{
-    height:20vh;
+.cardRedondo {
+    height: 20vh;
     width: 88vh;
     padding-top: 35px;
     margin: auto;
@@ -264,16 +272,16 @@ sup {
     background-color: rgb(157, 181, 219);
 }
 
-.areaCardRedondo{
-    background-color:#EBEBEB;
+.areaCardRedondo {
+    background-color: #EBEBEB;
     height: 100px;
     width: 100px;
     float: left;
     margin-left: 25px;
-    
+
 }
 
-.imgCardRedondo{
+.imgCardRedondo {
     width: 100%;
     height: 100%;
     border: 1px solid #FFFFFF;
@@ -281,37 +289,38 @@ sup {
 }
 
 /*texto da categoria*/
-.categoria{
+.categoria {
     font-size: 7pt;
     margin-bottom: 0px;
     margin-left: 27px;
 }
 
-.txtCardRedondo{
-    margin-top:0px;
+.txtCardRedondo {
+    margin-top: 0px;
     text-align: center;
 }
 
 
 /* cards redondo melhores marcas para vc*/
 
-.cardsRedondoLargo{
-    height:20vh;
+.cardsRedondoLargo {
+    margin-bottom: 25vh;
+    height: 20vh;
 }
 
-.txtMelhoresMarcas{
+.txtMelhoresMarcas {
     text-align: center;
 }
 
-.mrgCardsRedondo{
+.mrgCardsRedondo {
     margin-left: 95.5px;
 }
 
-.mrgCardsRedondoPrimeiro{
+.mrgCardsRedondoPrimeiro {
     margin-left: 3px;
 }
 
-.btnProximoDireito{
+.btnProximoDireito {
     width: 9vh;
     height: 9vh;
     border-radius: 100%;
@@ -321,41 +330,123 @@ sup {
     background-color: #FFFFFF;
 }
 
-.btnDirecao{
-   margin-top: 50px;
-   padding-right: -100px;
-   margin-right: -100px;
-   padding-left: -50px;
-   margin-left: -50px;
+.btnDirecao {
+    margin-top: 50px;
+    padding-right: -100px;
+    margin-right: -100px;
+    padding-left: -50px;
+    margin-left: -50px;
 }
 
 
-
-
-.larguraPadrao {
-    background-color: #cad100;
-    margin-left: 120px;
-    margin-right: 120px;
-    margin-bottom: 20px;
+/*Ofertas em destaque*/
+.umaColunaCard {
+    height: 423px;
+    margin-bottom: 25vh;
 }
 
-.larguraPadrao1 {
-    background-color: rgba(242, 23, 242, 0.504);
-    width: 100vh;
-    height: 6.8vh;
-    margin: auto;
-    margin-bottom: 20px;
+.margemBoMenor {
+    height: 350px;
 }
 
+/*Cards redondo tedencias da moda*/
 
-#todasAsOfertas {
+.cardRedondoTedencias {
+    height: 25vh;
+    margin-bottom: 15vh;
+}
+
+.marginLeft {
+    margin-left: 55px;
+}
+
+/*3 cards dos descontas das categorais look, calçados e jaquetas */
+
+.txtLookinhos {
+    margin-left: 92px;
+}
+
+.tresCards {
+    height: 309px;
+    margin-bottom: 15vh;
+}
+
+/*botao de todas as ofertas*/
+
+.todasAsOfertas {
     background-color: #3483FA;
     border-radius: 15px;
-    width: 100px;
+    width: 280px;
     height: 50px;
-    margin: auto;
-    margin-bottom: 20px;
+    font-size: 25px;
+    margin-left: 500px;
 }
+
+/*Botao das ofertas*/
+
+.btnTodasOfertas {
+    margin-bottom: 10vh;
+}
+
+
+/*dois cards full entrega e look*/
+
+.areaPostEntrega {
+    height: 32vh;
+    margin-bottom: 10vh;
+    margin-top: 5vh;
+}
+
+.areaPost {
+    background-color: rgb(255, 47, 0);
+    height: 31vh;
+    width: 85vh;
+    float: left;
+    margin-left: 0px;
+}
+
+.imgEntregaFull {
+    width: 100%;
+    height: 100%;
+}
+
+.imgPostEntrega {
+    margin-left: 22px;
+}
+
+/* Post Flamengo*/
+
+.areaTxt {
+    margin-top: 5px;
+    margin-left: 5px;
+    text-align: justify;
+    font-family: Helvetica;
+    font-size: 9pt;
+    color: #6D6C6F;
+}
+
+/*btb de mais informações*/
+
+#btbInfor {
+    background-color: #FFFFFF;
+    margin-left: 650px;
+    margin-right: 650px;
+    border-radius: 7%;
+    border: none;
+    height: 40px;
+    width: 200px;
+    margin-bottom: -5px;
+}
+
+#txtFormatacao{
+    font-family: Helvetica;
+    font-size: 12pt;
+    color: #6D6C6F;
+}
+
+
+
+/*Informações*/
 
 #informações {
     background-color: #FFFFFF;
