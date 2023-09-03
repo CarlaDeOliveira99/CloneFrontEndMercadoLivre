@@ -8,13 +8,13 @@ var direita  = true
 
 
 window.onload = function () {
-    setInterval(carregar, 100)
+    setInterval(horizontal, 100)
 
 }
 
 
 
-function carregar() {
+function horizontal() {
 
     if (direita == true ) {
         circulo.style.left = contador + '%'
