@@ -1,22 +1,37 @@
 /*Criar uma div redonda e fazer ela se mover horizontalmente pela tela*/
+// 0 até 93
 
-let divCirculo = document.getElementById('circulo')
+var circulo = document.getElementById('circulo')
+var contador = 0
+var direita  = true
+
+
+
+window.onload = function () {
+    setInterval(carregar, 100)
+
+}
+
 
 
 function carregar() {
 
-    let animacao = [
-        { transform: "translateX(725px)" },
-        { transform: "translateX(-725px)" },
-        { transform: "translateX(725px)" },
-    ]
-
-    let tempo = {
-        duration: 3000,
-        iterations: Infinity,
+    if (direita == true ) {
+        circulo.style.left = contador + '%'
+        contador += 2
+    } else{
+        circulo.style.left = contador + '%'
+        contador -= 2
+    }
+     
+    if (contador >= 93) { 
+        direita = false
     }
 
-    document.getElementById('circulo').animate(animacao, tempo)
+    if (contador <= 0) {
+        direita = true
+    }
+   
 }
 
 
