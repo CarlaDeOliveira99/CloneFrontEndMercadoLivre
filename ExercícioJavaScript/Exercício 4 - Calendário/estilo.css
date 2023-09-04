@@ -1,0 +1,99 @@
+
+        body {
+            background: linear-gradient(0deg, rgba(3, 231, 235, 0.586) 0%, rgba(45, 184, 253, 0.433) 100%);
+            background-size: 100% 340%
+
+        }
+
+        .calendar th,
+        td {
+            border: solid 1px rgb(0, 194, 229);
+            width: 40px;
+            height: 30px;
+        }
+        td:hover{
+            background-color: rgba(0, 157, 157, 0.451);
+        }
+
+        .calendar {
+            text-align: center;
+        }
+
+        #area {
+            display: flex;
+            margin-top: 2%;
+            justify-content: center;
+        }
+
+        #areaInput {
+            margin-left: 2%;
+            margin-top: 1%;
+            width: 30%;
+            
+        }
+
+        .data {
+            padding: 1%;
+            margin-left: 1%;
+            font-size: 12pt;
+            opacity: .7;
+            border: none;
+            border-radius: 7%;
+            font-weight: bold;
+        }
+
+        label{
+            margin-left: 2%;
+        }
+
+        #btn {
+            margin-top: 5%;
+            margin-left: 45%;
+            padding: 1%;
+            font-size: 12pt;
+            background-color: rgba(13, 47, 160, 0.249);
+            border: 1px solid rgba(13, 47, 160, 0.249);
+            border-radius: 5%;
+            transition: 1s;
+        }
+
+        #btn:hover{
+            background-color: rgb(9, 198, 255);
+            border: 1px solid rgb(9, 198, 255);
+        }
+
+        #diferencaDias {
+            font-family: arial;
+            font-size: 20pt;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 10%;
+            margin-left: 3%;
+            display: block;
+            animation: animate 
+            1.8s linear infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                opacity: 0.6;
+            }
+  
+            50% {
+                opacity: 1;
+            }
+  
+            100% {
+                opacity: 0.6;
+            }
+        }
+
+        table{
+           background-color: rgba(255, 255, 255, .5);
+           border: 2px solid rgb(255, 255, 255);
+        }
+
+        thead{
+            background-color: rgba(0, 157, 157, 0.451);
+        }
+      
