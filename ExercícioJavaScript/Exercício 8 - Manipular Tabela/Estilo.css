@@ -1,0 +1,28 @@
+#anuciado {
+    display: grid;
+    margin: 0 auto;
+    text-align: justify;
+    justify-items: center;
+    width: 32%;
+    font-size: 15pt;
+    margin-bottom: 2%;
+    border: 2px dashed;
+    padding: 1%;
+    background-color: rgba(162, 216, 198, 0.382);
+}
+
+#areaTabela{
+    background-color: aqua;
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+#areaBtnPesquisa{
+    background-color: rgb(132, 255, 0);
+    width: 100%;
+    height: 100%;
+}
+
+
+
