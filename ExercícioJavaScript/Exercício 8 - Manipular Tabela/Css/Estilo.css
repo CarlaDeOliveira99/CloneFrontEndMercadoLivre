@@ -1,0 +1,259 @@
+body {
+    background-color: rgba(64, 57, 57, 1);
+    padding: 16px;
+}
+
+#anuciado {
+    display: grid;
+    justify-content: center;
+    margin: 0 auto;
+    color: #FFF;
+    text-align: justify;
+    font-family: Arial;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 35px;
+}
+
+#areaTabela {
+    margin: 0 auto;
+    width: 850px;
+    height: 100%;
+}
+
+/* area acima da tabela */
+
+#areaBtnPesquisa {
+    margin: 5% auto;
+    background-color: #357381;
+    width: 850px;
+    height: 80px;
+    margin-bottom: 0;
+}
+
+.btn {
+    background: #2CC91E;
+    color: #FFF;
+    text-align: center;
+    font-family: arial;
+    font-size: 16px;
+    font-style: normal;
+    border: none;
+    width: 90px;
+    height: 30px;
+    margin-top: 3%;
+    font-weight: bold;
+    margin-left: 1%;
+}
+
+.btn:hover {
+    background: #2cc91e7c;
+    cursor: pointer;
+}
+
+#campoPesquisa {
+    margin-top: 3%;
+    width: 247px;
+    height: 29px;
+    float: right;
+}
+
+#btnLupa {
+    margin-top: 3%;
+    width: fit-content;
+    height: 29px;
+    float: right;
+    margin-right: 1%;
+}
+
+/* Parte da tabela */
+
+.titulo {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+    color: #FFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+}
+
+#titulo1 {
+    width: 60px;
+}
+
+#titulo2 {
+    width: 350px;
+}
+
+
+thead {
+    background: #357381;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table {
+    width: 100%;
+}
+
+tbody{
+    background-color:#EFEFEF ;
+}
+
+/*Modal do cadastro*/
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    color: #fff;
+    margin-bottom: 5%;
+}
+
+#txtCadastro{
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16pt;
+    letter-spacing: 2px;
+}
+
+#campoProd {
+    padding-left: 8px;
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 7px;
+    background: #D9D9D9; 
+    border: none;
+    width: 350px;
+    height: 30px;
+
+}
+
+.campoPreco{
+    padding-left: 8px;
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 7px;
+    background: #D9D9D9; 
+    border: none;
+    width: 100px;
+    height: 30px;
+}
+
+
+
+.campoDados{
+    padding-left: 8px;
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 7px;
+    background: #D9D9D9; 
+    border: none;
+    width: 65px;
+    height: 30px;
+}
+
+
+#txtUnidade{
+    margin-left: 5%;
+}
+
+
+#btnModalFechar {
+    padding: .7% 2% 0.7%;
+    background-color: #888;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 16px;
+}
+
+#btnModalCadastrar{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 9.6px 19.2px;
+    background-color:#08284E;;
+    color: #fff;
+    border: none;
+    border-radius: 13px;
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 16px;
+}
+
+
+#btnModalFechar:hover {
+    opacity: 1;
+}
+
+#btnModalCadastrar:hover {
+    opacity: 1;
+    background-color: #0400fc75;
+}
+
+#telaCadastro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 5;
+   
+}
+
+#modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    max-width: 90%;
+    background-color: #1b5663;
+    padding: 19.2px;
+    border-radius: 8px;
+    z-index: 10;
+}
+
+#telaCadastro,
+#modal {
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+    /*funcionar os eventos*/
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+#modalCorpo {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center    
+}
+
+/*sumir*/
+#modal.hide,
+#telaCadastro.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+#modal.hide {
+    top: 0;
+}

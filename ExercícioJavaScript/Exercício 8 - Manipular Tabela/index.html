@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
     <meta charset="utf-8">
@@ -7,7 +7,7 @@
     <title> Manipulação de tabela </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="Estilo.css">
+    <link rel="stylesheet" href="Css/Estilo.css">
 </head>
 
 <body>
@@ -17,19 +17,54 @@
             linha, ordenar, e com um campo de pesquisa)</label>
     </div>
 
-
+<!-- Area acima da tabela onde possui os botões e barra de pesquisa -->
     <div id="areaTabela">
-       <div id="areaBtnPesquisa">
-        <button class="btn" id="btnAdicionar">Adicionar</button>
-        <button class="btn" id="btnRemover">Remover</button>
-        <button class="btn" id="btnRemover">Ordenar</button>
-        <input type="search" name="campoPesquisa" id="campoPesquisa">
-       <button><img src="icone/lupa-de-pesquisa.png" alt="Botão de Pesquisar"></button>
-       </div>
-       <div id="tabela"></div>
+        <div id="areaBtnPesquisa">
+            <button class="btn" id="btnAdicionar">Adicionar</button>
+            <button class="btn" id="btnRemover">Remover</button>
+            <button class="btn" id="btnOrdenar">Ordenar</button>
+            <button id="btnLupa"><img src="icone/lupa-de-pesquisa.png" alt="Botão de Pesquisar" id="ImgLupa"></button>
+            <input type="search" name="campoPesquisa" id="campoPesquisa">
+        </div>
+
+        <table>
+            <thead>
+                <tr id="linhaTituloTab">
+                    <td class="titulo" id="titulo1">Cód</td>
+                    <td class="titulo" id="titulo2">Produto</td>
+                    <td class="titulo" id="titulo3">Quantidade</td>
+                    <td class="titulo" id="titulo4">Unidade</td>
+                    <td class="titulo" id="titulo5">Preço de compra</td>
+                    <td class="titulo" id="titulo6">Preço de Venda</td>
+                    <td class="titulo" id="titulo7">Editar</td>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
     </div>
 
-    <script src="Script.js" async defer></script>
+<!-- Estrutura do modal Cadastro -->
+    <div id="telaCadastro" class="hide"></div><!--fundo so modal-->
+    <div id="modal" class="hide"><!--modal-->
+        <div class="modalHeader"><!--cabeçalho-->
+            <button type="button" id="btnModalFechar"><img src="icone/voltar.png" alt=""></button>
+            <h1>Cadastrar Produto</h1>
+            <div id="txtCadastro">
+                <p id="txtProduto">Produto <input id="campoProd" type="text"></p>
+                <span id="txtQuantidade">Quantidade <input class="campoDados" type="number" min="0"></span>
+                <span id="txtUnidade">Unidade <input class="campoDados" type="text" min="0"></span>
+                <p id="txtPrecoIni" class="txtPreco">Preço de Compra <input class="campoPreco" type=""></p>
+                <p id="txtPrecoFinal" class="txtPreco">Preço de Venda <input class="campoPreco" type=""></p>
+            </div>
+        </div>
+        <div id="modalCorpo"><!--corpo-->
+            <button type="button" id="btnModalCadastrar">Cadastrar</button>
+        </div>
+    </div>
+
+    <script src="JavaScript/Produto.js" async defer></script>
+    <script src="JavaScript/ModalCadastro.js" async defer></script>
 </body>
 
 </html>
