@@ -44,7 +44,7 @@ body {
     height: 30px;
     margin-top: 3%;
     font-weight: bold;
-    margin-left: 1%;
+    margin-left: 2%;
 }
 
 .btn:hover {
@@ -256,4 +256,32 @@ h1 {
 
 #modal.hide {
     top: 0;
+}
+ 
+/* td da tabela */
+.center{
+    text-align: center;
+}
+
+
+
+.imgPadrao{
+    width:16px ;
+    height: 16px;
+    margin-left: 5px;
+}    
+
+
+.imgPadrao:hover{
+    transform: scale(1.2);
+} 
+
+
+.trInfor:hover{
+    background-color: #018aa9;
+    color: white;
+}
+
+.tdInfo{
+    padding-left: 4px;
 }

@@ -17,12 +17,10 @@
             linha, ordenar, e com um campo de pesquisa)</label>
     </div>
 
-<!-- Area acima da tabela onde possui os botões e barra de pesquisa -->
+    <!-- Area acima da tabela onde possui os botões e barra de pesquisa -->
     <div id="areaTabela">
         <div id="areaBtnPesquisa">
             <button class="btn" id="btnAdicionar">Adicionar</button>
-            <button class="btn" id="btnRemover">Remover</button>
-            <button class="btn" id="btnOrdenar">Ordenar</button>
             <button id="btnLupa"><img src="icone/lupa-de-pesquisa.png" alt="Botão de Pesquisar" id="ImgLupa"></button>
             <input type="search" name="campoPesquisa" id="campoPesquisa">
         </div>
@@ -39,12 +37,12 @@
                     <td class="titulo" id="titulo7">Editar</td>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="tbody">
             </tbody>
         </table>
     </div>
 
-<!-- Estrutura do modal Cadastro -->
+    <!-- Estrutura do modal Cadastro -->
     <div id="telaCadastro" class="hide"></div><!--fundo so modal-->
     <div id="modal" class="hide"><!--modal-->
         <div class="modalHeader"><!--cabeçalho-->
@@ -52,19 +50,23 @@
             <h1>Cadastrar Produto</h1>
             <div id="txtCadastro">
                 <p id="txtProduto">Produto <input id="campoProd" type="text"></p>
-                <span id="txtQuantidade">Quantidade <input class="campoDados" type="number" min="0"></span>
-                <span id="txtUnidade">Unidade <input class="campoDados" type="text" min="0"></span>
-                <p id="txtPrecoIni" class="txtPreco">Preço de Compra <input class="campoPreco" type=""></p>
-                <p id="txtPrecoFinal" class="txtPreco">Preço de Venda <input class="campoPreco" type=""></p>
+                <span id="txtQuantidade">Quantidade <input id="quantidade" class="campoDados" type="number"
+                        min="0"></span>
+                <span id="txtUnidade">Unidade <input class="campoDados" id="unidade" type="text" min="0"></span>
+                <p id="txtPrecoIni" class="txtPreco">Preço de Compra <input id="precoInicial" class="campoPreco"
+                        type="number" min="0" step="0.01"></p>
+                <p id="txtPrecoFinal" class="txtPreco">Preço de Venda <input id="precoFinal" class="campoPreco"
+                        type="number" min="0" step="0.01"></p>
             </div>
         </div>
         <div id="modalCorpo"><!--corpo-->
-            <button type="button" id="btnModalCadastrar">Cadastrar</button>
+            <button type="button" id="btnModalCadastrar">Salvar</button>
         </div>
     </div>
 
     <script src="JavaScript/Produto.js" async defer></script>
     <script src="JavaScript/ModalCadastro.js" async defer></script>
+    <script src="JavaScript/Scprit.js" async defer></script>
 </body>
 
 </html>
