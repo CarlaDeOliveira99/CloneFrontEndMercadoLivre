@@ -69,6 +69,8 @@ body {
 
 /* Parte da tabela */
 
+
+
 .titulo {
     padding-top: 1%;
     padding-bottom: 1%;
@@ -76,6 +78,8 @@ body {
     color: #FFF;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 10pt;
+
+
 }
 
 #titulo1 {
@@ -100,20 +104,22 @@ table {
     width: 100%;
 }
 
-tbody{
-    background-color:#EFEFEF ;
+tbody {
+    background-color: #EFEFEF;
 }
 
 /*Modal do cadastro*/
 
+
+
 h1 {
     font-family: Arial, Helvetica, sans-serif;
     margin: auto;
-    color: #fff;
+    color: #ffffff;
     margin-bottom: 5%;
 }
 
-#txtCadastro{
+#txtCadastro {
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16pt;
@@ -125,19 +131,19 @@ h1 {
     font-size: 12pt;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 7px;
-    background: #D9D9D9; 
+    background: #D9D9D9;
     border: none;
     width: 350px;
     height: 30px;
 
 }
 
-.campoPreco{
+.campoPreco {
     padding-left: 8px;
     font-size: 12pt;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 7px;
-    background: #D9D9D9; 
+    background: #D9D9D9;
     border: none;
     width: 100px;
     height: 30px;
@@ -145,19 +151,19 @@ h1 {
 
 
 
-.campoDados{
+.campoDados {
     padding-left: 8px;
     font-size: 12pt;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 7px;
-    background: #D9D9D9; 
+    background: #D9D9D9;
     border: none;
     width: 65px;
     height: 30px;
 }
 
 
-#txtUnidade{
+#txtUnidade {
     margin-left: 5%;
 }
 
@@ -173,12 +179,12 @@ h1 {
     font-size: 16px;
 }
 
-#btnModalCadastrar{
+.salvar {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     letter-spacing: 1px;
     padding: 9.6px 19.2px;
-    background-color:#08284E;;
+    background-color: #08284E;
     color: #fff;
     border: none;
     border-radius: 13px;
@@ -187,26 +193,20 @@ h1 {
     font-size: 16px;
 }
 
+#alterar {
+    display: none;
+}
 
 #btnModalFechar:hover {
     opacity: 1;
 }
 
-#btnModalCadastrar:hover {
+.salvar:hover {
     opacity: 1;
-    background-color: #0400fc75;
+    background-color: #0a16ff6c;
 }
 
-#telaCadastro {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 5;
-   
-}
+
 
 #modal {
     position: fixed;
@@ -221,14 +221,6 @@ h1 {
     z-index: 10;
 }
 
-#telaCadastro,
-#modal {
-    transition: 0.5s;
-    opacity: 1;
-    pointer-events: all;
-    /*funcionar os eventos*/
-}
-
 .modalHeader {
     display: flex;
     justify-content: space-between;
@@ -237,51 +229,143 @@ h1 {
     padding-bottom: 16px;
     flex-direction: column;
     align-items: flex-start;
-    
 }
+
 
 #modalCorpo {
     margin-bottom: 16px;
-    display: flex;
-    justify-content: center    
+    display: grid;
+    justify-content: center
+}
+
+
+
+#modalFundo,#modalFundoExcluir {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 5;
+}
+
+
+#modalFundo,#modalExcluir, 
+#modal {
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+    /*funcionar os eventos*/
 }
 
 /*sumir*/
 #modal.hide,
-#telaCadastro.hide {
+#modalFundo.hide,#modalExcluir.esconder,#modalFundoExcluir.esconder  {
     opacity: 0;
     pointer-events: none;
 }
 
 
-#modal.hide {
+#modal.hide, #modalExcluir.esconder {
     top: 0;
 }
- 
+
+
+
 /* td da tabela */
-.center{
+.center {
     text-align: center;
 }
 
 
 
-.imgPadrao{
-    width:16px ;
+.imgPadrao {
+    width: 16px;
     height: 16px;
     margin-left: 5px;
-}    
-
-
-.imgPadrao:hover{
-    transform: scale(1.2);
-} 
-
-
-.trInfor:hover{
-    background-color: #018aa9;
-    color: white;
 }
 
-.tdInfo{
+
+.imgPadrao:hover {
+    transform: scale(1.2);
+}
+
+
+.trInfor:hover {
+    background-color: #7e7e7e62;
+    color: rgb(0, 0, 0);
+}
+
+.tdInfo {
     padding-left: 4px;
+}
+
+
+
+
+
+/* modal Excluir */
+.cabecalhoModalExcluir{
+display: inline;
+}
+
+#modalExcluir {
+    position: fixed;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    max-width: 90%;
+    background-color: #ffffff;
+    padding: 19.2px;
+    border-radius: 8px;
+    z-index: 10;
+}
+
+#tituloExcluir {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    font-weight: bold;
+    font-size: 15pt;
+    text-align: center;
+    margin-bottom: 5%;
+    margin-left: 30px;
+}
+
+#CampoDadosExcluir{
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+}
+
+#textoDoExcluir {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    color: #000000;
+}
+
+#botoesDoCampoExcluir{
+    display: flex;
+    justify-content: center;
+}
+
+
+.btnDeExcluir{
+    margin: 5px;
+    padding: 5px 10px 5px 10px;
+    font-family: arial;
+    font-weight: bold;
+    margin-right: 10px;
+    border: 1px solid #999999;
+    background-color: #e3e0e0;
+    border-radius: 5px;
+}
+
+.btnDeExcluir:hover{
+background-color: #9f9e9e;
+border: 1px solid #9f9e9e;
+box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+cursor: pointer;
+transition: 1s;
 }

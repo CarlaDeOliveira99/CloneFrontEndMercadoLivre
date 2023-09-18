@@ -6,18 +6,18 @@ class Produto {
     precoInicial;
     procoFinal;
     arrayProduto;
+    excluirStatus
 
     constructor() {
-        this.id = 0
+        this.id = 1
         this.descricao = ''
         this.quantidade = 0
         this.unidade = ''
         this.precoIncial = 0
         this.precoFinal = 0
-        this.arraayProduto = [];
+        this.arrayProduto = [];
+        this.excluirStatus = false
     }
-
-
 
 
     coletarDados() {
@@ -34,9 +34,9 @@ class Produto {
     }
 
 
-
     validarCampo(produto) {
         let msg = '';
+
         if (produto.descricao == '') {
             msg += 'Informe o nome do produto\n'
         }
@@ -55,26 +55,25 @@ class Produto {
 
         if (msg != '') {
             alert(msg)
+
             return false
         }
         return true
     }
 
     adicionar(produto) {
-        this.arraayProduto.push(produto);
+        this.arrayProduto.push(produto);
         this.id++
 
     }
 
+    atualizarTabela() {
+        let tbody = document.getElementById('tbody')
+        tbody.innerText = ''
 
+        for (let i = 0; i < this.arrayProduto.length; i++) {
+            let tr = tbody.insertRow()
 
-
-    inserirTabela() {
-        let estruturaTabela = document.getElementById('tbody')
-
-
-        for (let index = 0; index < this.arraayProduto.length; index++) {
-            let tr = estruturaTabela.insertRow()
 
             let tdID = tr.insertCell()
             let tdProduto = tr.insertCell()
@@ -86,46 +85,153 @@ class Produto {
 
             tr.classList.add('trInfor')
 
-            tdID.innerHTML = this.arraayProduto[index].id;
-            tdProduto.innerHTML = this.arraayProduto[index].descricao;
-            tdQuantidade.innerHTML = this.arraayProduto[index].quantidade;
-            tdUnidade.innerHTML = this.arraayProduto[index].unidade;
-            tdPrecoIni.innerHTML = this.arraayProduto[index].precoInicial;
-            tdPrecoFin.innerHTML = this.arraayProduto[index].precoFinal;
+
+            tdID.innerHTML = this.arrayProduto[i].id;
+            tdProduto.innerHTML = this.arrayProduto[i].descricao;
+            tdQuantidade.innerHTML = this.arrayProduto[i].quantidade;
+            tdUnidade.innerHTML = this.arrayProduto[i].unidade;
+            tdPrecoIni.innerHTML = this.arrayProduto[i].precoInicial;
+            tdPrecoFin.innerHTML = this.arrayProduto[i].precoFinal;
+
 
             tdID.classList.add('center')
             tdProduto.classList.add('tdInfo')
-            tdQuantidade.classList.add('tdInfo')
+            tdQuantidade.classList.add('center')
             tdUnidade.classList.add('tdInfo')
-            tdPrecoIni.classList.add('tdInfo')
-            tdPrecoIni.classList.add('tdInfo')
+            tdPrecoIni.classList.add('center')
+            tdPrecoFin.classList.add('center')
+
+            var imgEditar = document.createElement('img')
+            imgEditar.src = 'icone/editar.png'
+            imgEditar.classList.add('imgPadrao')
+            var imgExcluir = document.createElement('img')
+            imgExcluir.src = 'icone/lixeira.png'
+            imgExcluir.classList.add('imgPadrao')
+
+            tdacoes.appendChild(imgExcluir)
+            tdacoes.appendChild(imgEditar)
 
 
-            let imgEidt = document.createElement('img')
-            imgEidt.src = 'icone/editar.png'
-            imgEidt.classList.add('imgPadrao')
-            let imgExclu = document.createElement('img')
-            imgExclu.src = 'icone/lixeira.png'
-            imgExclu.classList.add('imgPadrao')
+            // alterar os dados da tabela
+            imgEditar.addEventListener('click', (event) => {
 
-            tdacoes.appendChild(imgExclu)
-            tdacoes.appendChild(imgEidt)
+                imgEditar = event.target
+
+                let armazenaCampoAlterar = imgEditar.parentElement.parentElement.childNodes
+
+
+                tdID = armazenaCampoAlterar[0].innerHTML
+                tdProduto = armazenaCampoAlterar[1].innerHTML
+                tdQuantidade = armazenaCampoAlterar[2].innerHTML
+                tdUnidade = armazenaCampoAlterar[3].innerHTML
+                tdPrecoIni = armazenaCampoAlterar[4].innerHTML
+                tdPrecoFin = armazenaCampoAlterar[5].innerHTML
+
+
+                modal.classList.toggle("hide");
+                fundoModal.classList.toggle("hide");
+
+                document.getElementById('campoID').value = tdID
+                document.getElementById('campoProd').value = tdProduto
+                document.getElementById('quantidade').value = tdQuantidade
+                document.getElementById('unidade').value = tdUnidade
+                document.getElementById('precoInicial').value = tdPrecoIni
+                document.getElementById('precoFinal').value = tdPrecoFin
+
+                document.getElementById('btnModalCadastrar').style.display = 'none'
+                document.getElementById('alterar').style.display = 'inline'
+
+
+            })
+
+            // Excluir os dados
+            imgExcluir.addEventListener('click', (event) => {
+
+                imgExcluir = event.target
+
+                let linhaSelecionada = ''
+
+                let armazenaCampoDeExcluir = imgExcluir.parentElement.parentElement.childNodes
+
+                tdID = armazenaCampoDeExcluir[0].innerHTML
+                tdProduto = armazenaCampoDeExcluir[1].innerHTML
+                tdQuantidade = armazenaCampoDeExcluir[2].innerHTML
+                tdUnidade = armazenaCampoDeExcluir[3].innerHTML
+                tdPrecoIni = armazenaCampoDeExcluir[4].innerHTML
+                tdPrecoFin = armazenaCampoDeExcluir[5].innerHTML
+
+                linhaSelecionada = `<p>Código: ${tdID}</p><p>Produto: ${tdProduto}</p> <p>Quantidade: ${tdQuantidade}</p> <p> Total de unidade: ${tdUnidade}</p><p>Preço de compra: ${tdPrecoIni}</p><p>Preço de venda: ${tdPrecoFin}</p>`
+                let areaDoTexto = document.getElementById('textoDoExcluir')
+
+
+                areaDoTexto.innerHTML = linhaSelecionada
+
+                excluirModal.classList.toggle("esconder");
+                fundoModalExcluir.classList.toggle("esconder");
+
+
+                
+                document.getElementById('campoID').value = tdID
+                document.getElementById('campoProd').value = tdProduto
+                document.getElementById('quantidade').value = tdQuantidade
+                document.getElementById('unidade').value = tdUnidade
+                document.getElementById('precoInicial').value = tdPrecoIni
+                document.getElementById('precoFinal').value = tdPrecoFin
+
+
+            })
         }
+    }
+
+    alterarCampo(produto) {
+        this.arrayProduto.forEach(jsonProduto => {
+            if (jsonProduto.id == produto.tdId) {
+                jsonProduto.descricao = produto.tdProduto
+                jsonProduto.quantidade = produto.tdQuantidade
+                jsonProduto.unidade = produto.tdUnidade
+                jsonProduto.precoIncial = produto.tdPrecoIni
+                jsonProduto.precoFinal = produto.tdPrecoFin
+            }
+        })
+        this.atualizarTabela()
+
+    }
+
+
+    excluirCampo(produto) {
+
+
+        this.arrayProduto.forEach(produtoExcluir => {
+            if (produtoExcluir.id == produto.tdId) {
+                
+           
+        }
+    })
+
+
+    this.atualizarTabela()
     }
 
 
 
-    salvar() {
-        let produto = this.coletarDados()
+limparCampoCadastro() {
+    document.getElementById('campoProd').value = ''
+    document.getElementById('quantidade').value = ''
+    document.getElementById('unidade').value = ''
+    document.getElementById('precoInicial').value = ''
+    document.getElementById('precoFinal').value = ''
+}
 
 
-        if (this.validarCampo(produto) == true) {
-            this.adicionar(produto)
-            this.inserirTabela()
-        }
+salvar() {
+    let produto = this.coletarDados()
+
+    if (this.validarCampo(produto) == true) {
+        this.adicionar(produto)
     }
+    this.atualizarTabela()
 
-
+}
 }
 
 
