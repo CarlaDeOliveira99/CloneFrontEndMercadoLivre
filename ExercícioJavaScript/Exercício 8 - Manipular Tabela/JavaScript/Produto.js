@@ -6,7 +6,6 @@ class Produto {
     precoInicial;
     procoFinal;
     arrayProduto;
-    excluirStatus
 
     constructor() {
         this.id = 1
@@ -16,12 +15,17 @@ class Produto {
         this.precoIncial = 0
         this.precoFinal = 0
         this.arrayProduto = [];
-        this.excluirStatus = false
     }
 
 
     coletarDados() {
         let produto = {}
+
+        if (this.arrayProduto.length == 0) {
+            this.id = 1
+        } else {
+            this.id++
+        }
 
         produto.id = this.id;
         produto.descricao = document.getElementById('campoProd').value
@@ -63,9 +67,9 @@ class Produto {
 
     adicionar(produto) {
         this.arrayProduto.push(produto);
-        this.id++
-
     }
+
+
 
     atualizarTabela() {
         let tbody = document.getElementById('tbody')
@@ -101,10 +105,10 @@ class Produto {
             tdPrecoIni.classList.add('center')
             tdPrecoFin.classList.add('center')
 
-            var imgEditar = document.createElement('img')
+            let imgEditar = document.createElement('img')
             imgEditar.src = 'icone/editar.png'
             imgEditar.classList.add('imgPadrao')
-            var imgExcluir = document.createElement('img')
+            let imgExcluir = document.createElement('img')
             imgExcluir.src = 'icone/lixeira.png'
             imgExcluir.classList.add('imgPadrao')
 
@@ -149,7 +153,7 @@ class Produto {
 
                 imgExcluir = event.target
 
-                let linhaSelecionada = ''
+                let linhaSelecionadainformacoes = ''
 
                 let armazenaCampoDeExcluir = imgExcluir.parentElement.parentElement.childNodes
 
@@ -160,24 +164,15 @@ class Produto {
                 tdPrecoIni = armazenaCampoDeExcluir[4].innerHTML
                 tdPrecoFin = armazenaCampoDeExcluir[5].innerHTML
 
-                linhaSelecionada = `<p>Código: ${tdID}</p><p>Produto: ${tdProduto}</p> <p>Quantidade: ${tdQuantidade}</p> <p> Total de unidade: ${tdUnidade}</p><p>Preço de compra: ${tdPrecoIni}</p><p>Preço de venda: ${tdPrecoFin}</p>`
+                linhaSelecionadainformacoes = `<p>Código: ${tdID}</p><p>Produto: ${tdProduto}</p> <p>Quantidade: ${tdQuantidade}</p> <p> Total de unidade: ${tdUnidade}</p><p>Preço de compra: ${tdPrecoIni}</p><p>Preço de venda: ${tdPrecoFin}</p>`
                 let areaDoTexto = document.getElementById('textoDoExcluir')
 
-
-                areaDoTexto.innerHTML = linhaSelecionada
+                areaDoTexto.innerHTML = linhaSelecionadainformacoes
 
                 excluirModal.classList.toggle("esconder");
                 fundoModalExcluir.classList.toggle("esconder");
 
-
-                
                 document.getElementById('campoID').value = tdID
-                document.getElementById('campoProd').value = tdProduto
-                document.getElementById('quantidade').value = tdQuantidade
-                document.getElementById('unidade').value = tdUnidade
-                document.getElementById('precoInicial').value = tdPrecoIni
-                document.getElementById('precoFinal').value = tdPrecoFin
-
 
             })
         }
@@ -185,6 +180,7 @@ class Produto {
 
     alterarCampo(produto) {
         this.arrayProduto.forEach(jsonProduto => {
+
             if (jsonProduto.id == produto.tdId) {
                 jsonProduto.descricao = produto.tdProduto
                 jsonProduto.quantidade = produto.tdQuantidade
@@ -200,38 +196,57 @@ class Produto {
 
     excluirCampo(produto) {
 
+        let indiceExcluir = '';
 
-        this.arrayProduto.forEach(produtoExcluir => {
-            if (produtoExcluir.id == produto.tdId) {
-                
-           
+        this.arrayProduto.forEach(jsonProduto => {
+            if (jsonProduto.id == produto.tdId) {
+                indiceExcluir = this.arrayProduto.findIndex(jsonProduto => jsonProduto.id == produto.tdId);
+            }
+        })
+        this.arrayProduto.splice(indiceExcluir, 1)
+        this.atualizarTabela()
+    }
+
+    limparCampoCadastro() {
+        document.getElementById('campoProd').value = ''
+        document.getElementById('quantidade').value = ''
+        document.getElementById('unidade').value = ''
+        document.getElementById('precoInicial').value = ''
+        document.getElementById('precoFinal').value = ''
+    }
+
+
+    salvar() {
+        let produto = this.coletarDados()
+
+        if (this.validarCampo(produto) == true) {
+            this.adicionar(produto)
         }
-    })
+        this.atualizarTabela()
 
-
-    this.atualizarTabela()
     }
 
 
+    pesquisar() {
 
-limparCampoCadastro() {
-    document.getElementById('campoProd').value = ''
-    document.getElementById('quantidade').value = ''
-    document.getElementById('unidade').value = ''
-    document.getElementById('precoInicial').value = ''
-    document.getElementById('precoFinal').value = ''
-}
+        let campoPesquisaDigitado = document.getElementById('campoPesquisa')
+        let tr = document.getElementsByClassName('trInfor')
+      
+        
 
+        Array.from(tr).forEach(element => {
+            
+            let inforLista = element.textContent.toLocaleLowerCase().trim()
+            let txtCampoPesquisa = campoPesquisaDigitado.value.toLocaleLowerCase().trim()
 
-salvar() {
-    let produto = this.coletarDados()
+            if (inforLista.includes(txtCampoPesquisa)) {
+                element.style.fontWeight = "bold"
+            }
+            
+        });
 
-    if (this.validarCampo(produto) == true) {
-        this.adicionar(produto)
     }
-    this.atualizarTabela()
 
-}
 }
 
 

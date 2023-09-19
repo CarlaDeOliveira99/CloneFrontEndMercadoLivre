@@ -21,15 +21,10 @@ window.addEventListener('load', function () {
 
     this.document.getElementById('sim').addEventListener('click', function () {
         let produto = {}
-    
         produto.tdId = document.getElementById('campoID').value
-        produto.tdProduto = document.getElementById('campoProd').value
-        produto.tdQuantidade = document.getElementById('quantidade').value
-        produto.tdUnidade = document.getElementById('unidade').value
-        produto.tdPrecoIni = document.getElementById('precoInicial').value
-        produto.tdPrecoFin = document.getElementById('precoFinal').value
-
+     
         classProduto.excluirCampo(produto)
+
     })
 
     this.document.getElementById('btnAdicionar').addEventListener('click', function () {
@@ -38,6 +33,13 @@ window.addEventListener('load', function () {
         document.getElementById('alterar').style.display = 'none'
 
     })
+
+
+   this.document.getElementById('campoPesquisa').addEventListener('keyup', function () {
+
+l=classProduto.pesquisar()
+
+})
 
 
 })

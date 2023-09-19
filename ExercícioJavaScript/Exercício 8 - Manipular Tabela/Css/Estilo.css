@@ -24,12 +24,17 @@ body {
 
 /* area acima da tabela */
 
-#areaBtnPesquisa {
+#cabecalhoPesquisaAdicionar {
     margin: 5% auto;
     background-color: #357381;
     width: 850px;
     height: 80px;
     margin-bottom: 0;
+}
+
+#areaPesquisa {
+    background-color: #ff0000;
+
 }
 
 .btn {
@@ -53,18 +58,22 @@ body {
 }
 
 #campoPesquisa {
-    margin-top: 3%;
-    width: 247px;
+    margin-top: -3%;
+    width: 320px;
     height: 29px;
     float: right;
+    margin-right: 11px;
+    background-color: #D9D9D9;
+    padding-left: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    font-weight: 600;
 }
 
-#btnLupa {
-    margin-top: 3%;
-    width: fit-content;
-    height: 29px;
-    float: right;
-    margin-right: 1%;
+input[name='campoPesquisa'] {
+    background: url(../icone/lupa-de-pesquisa.png) ;
+    background-repeat: no-repeat;
+    background-position: top 5px left 3px;
 }
 
 /* Parte da tabela */
@@ -240,7 +249,7 @@ h1 {
 
 
 
-#modalFundo,#modalFundoExcluir {
+#modalFundo, #modalFundoExcluir {
     position: fixed;
     top: 0;
     left: 0;
@@ -251,7 +260,7 @@ h1 {
 }
 
 
-#modalFundo,#modalExcluir, 
+#modalFundo, #modalExcluir,
 #modal {
     transition: 0.5s;
     opacity: 1;
@@ -261,7 +270,7 @@ h1 {
 
 /*sumir*/
 #modal.hide,
-#modalFundo.hide,#modalExcluir.esconder,#modalFundoExcluir.esconder  {
+#modalFundo.hide, #modalExcluir.esconder, #modalFundoExcluir.esconder {
     opacity: 0;
     pointer-events: none;
 }
@@ -306,8 +315,8 @@ h1 {
 
 
 /* modal Excluir */
-.cabecalhoModalExcluir{
-display: inline;
+.cabecalhoModalExcluir {
+    display: inline;
 }
 
 #modalExcluir {
@@ -333,7 +342,7 @@ display: inline;
     margin-left: 30px;
 }
 
-#CampoDadosExcluir{
+#CampoDadosExcluir {
     display: flex;
     flex-wrap: wrap;
     height: fit-content;
@@ -345,13 +354,13 @@ display: inline;
     color: #000000;
 }
 
-#botoesDoCampoExcluir{
+#botoesDoCampoExcluir {
     display: flex;
     justify-content: center;
 }
 
 
-.btnDeExcluir{
+.btnDeExcluir {
     margin: 5px;
     padding: 5px 10px 5px 10px;
     font-family: arial;
@@ -362,10 +371,10 @@ display: inline;
     border-radius: 5px;
 }
 
-.btnDeExcluir:hover{
-background-color: #9f9e9e;
-border: 1px solid #9f9e9e;
-box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-cursor: pointer;
-transition: 1s;
+.btnDeExcluir:hover {
+    background-color: #9f9e9e;
+    border: 1px solid #9f9e9e;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    cursor: pointer;
+    transition: 1s;
 }
