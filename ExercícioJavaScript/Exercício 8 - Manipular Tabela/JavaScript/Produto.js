@@ -4,7 +4,7 @@ class Produto {
     descricao;
     quantidade;
     precoInicial;
-    procoFinal;
+    precoFinal;
     arrayProduto;
 
     constructor() {
@@ -12,11 +12,10 @@ class Produto {
         this.descricao = ''
         this.quantidade = 0
         this.unidade = ''
-        this.precoIncial = 0
+        this.precoInicial = 0
         this.precoFinal = 0
         this.arrayProduto = [];
     }
-
 
     coletarDados() {
         let produto = {}
@@ -36,7 +35,6 @@ class Produto {
 
         return produto
     }
-
 
     validarCampo(produto) {
         let msg = '';
@@ -58,8 +56,10 @@ class Produto {
         }
 
         if (msg != '') {
-            alert(msg)
 
+            alert(msg)
+            modal.classList.toggle("hide");
+            fundoModal.classList.toggle("hide");
             return false
         }
         return true
@@ -69,15 +69,12 @@ class Produto {
         this.arrayProduto.push(produto);
     }
 
-
-
     atualizarTabela() {
         let tbody = document.getElementById('tbody')
         tbody.innerText = ''
 
         for (let i = 0; i < this.arrayProduto.length; i++) {
             let tr = tbody.insertRow()
-
 
             let tdID = tr.insertCell()
             let tdProduto = tr.insertCell()
@@ -89,14 +86,12 @@ class Produto {
 
             tr.classList.add('trInfor')
 
-
             tdID.innerHTML = this.arrayProduto[i].id;
             tdProduto.innerHTML = this.arrayProduto[i].descricao;
             tdQuantidade.innerHTML = this.arrayProduto[i].quantidade;
             tdUnidade.innerHTML = this.arrayProduto[i].unidade;
             tdPrecoIni.innerHTML = this.arrayProduto[i].precoInicial;
             tdPrecoFin.innerHTML = this.arrayProduto[i].precoFinal;
-
 
             tdID.classList.add('center')
             tdProduto.classList.add('tdInfo')
@@ -115,7 +110,6 @@ class Produto {
             tdacoes.appendChild(imgExcluir)
             tdacoes.appendChild(imgEditar)
 
-
             // alterar os dados da tabela
             imgEditar.addEventListener('click', (event) => {
 
@@ -123,14 +117,12 @@ class Produto {
 
                 let armazenaCampoAlterar = imgEditar.parentElement.parentElement.childNodes
 
-
                 tdID = armazenaCampoAlterar[0].innerHTML
                 tdProduto = armazenaCampoAlterar[1].innerHTML
                 tdQuantidade = armazenaCampoAlterar[2].innerHTML
                 tdUnidade = armazenaCampoAlterar[3].innerHTML
                 tdPrecoIni = armazenaCampoAlterar[4].innerHTML
                 tdPrecoFin = armazenaCampoAlterar[5].innerHTML
-
 
                 modal.classList.toggle("hide");
                 fundoModal.classList.toggle("hide");
@@ -144,7 +136,6 @@ class Produto {
 
                 document.getElementById('btnModalCadastrar').style.display = 'none'
                 document.getElementById('alterar').style.display = 'inline'
-
 
             })
 
@@ -173,7 +164,6 @@ class Produto {
                 fundoModalExcluir.classList.toggle("esconder");
 
                 document.getElementById('campoID').value = tdID
-
             })
         }
     }
@@ -185,14 +175,14 @@ class Produto {
                 jsonProduto.descricao = produto.tdProduto
                 jsonProduto.quantidade = produto.tdQuantidade
                 jsonProduto.unidade = produto.tdUnidade
-                jsonProduto.precoIncial = produto.tdPrecoIni
+                jsonProduto.precoInicial = produto.tdPrecoIni
                 jsonProduto.precoFinal = produto.tdPrecoFin
             }
+            if (this.validarCampo(jsonProduto) == true) {
+                this.atualizarTabela()
+            }
         })
-        this.atualizarTabela()
-
     }
-
 
     excluirCampo(produto) {
 
@@ -215,7 +205,6 @@ class Produto {
         document.getElementById('precoFinal').value = ''
     }
 
-
     salvar() {
         let produto = this.coletarDados()
 
@@ -226,27 +215,38 @@ class Produto {
 
     }
 
-
     pesquisar() {
 
         let campoPesquisaDigitado = document.getElementById('campoPesquisa')
         let tr = document.getElementsByClassName('trInfor')
-      
-        
 
         Array.from(tr).forEach(element => {
-            
             let inforLista = element.textContent.toLocaleLowerCase().trim()
             let txtCampoPesquisa = campoPesquisaDigitado.value.toLocaleLowerCase().trim()
 
             if (inforLista.includes(txtCampoPesquisa)) {
-                element.style.fontWeight = "bold"
+
+                let td = element.childNodes
+
+                for (let index = 0; index < td.length; index++) {
+
+                    if (td[index].textContent.includes(txtCampoPesquisa)) {
+                        let celula = td[index];
+                        celula.style.fontWeight = "bold"
+                        celula.style.fontSize = "13pt"
+                    }
+                }
+            } else {
+                element.remove()
             }
-            
-        });
-
+        })
+        campoPesquisaDigitado.addEventListener('input', () => {
+            this.atualizarTabela()
+        })
+        if (campoPesquisaDigitado.value.trim() == '') {
+            return this.atualizarTabela()
+        }
     }
-
 }
 
 
