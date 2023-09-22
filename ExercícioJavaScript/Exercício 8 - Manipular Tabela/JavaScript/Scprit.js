@@ -22,27 +22,18 @@ window.addEventListener('load', function () {
     this.document.getElementById('sim').addEventListener('click', function () {
         let produto = {}
         produto.tdId = document.getElementById('campoID').value
-     
         classProduto.excluirCampo(produto)
-
     })
 
     this.document.getElementById('btnAdicionar').addEventListener('click', function () {
         classProduto.limparCampoCadastro();
         document.getElementById('btnModalCadastrar').style.display = 'inline'
         document.getElementById('alterar').style.display = 'none'
-
     })
 
 
-   this.document.getElementById('campoPesquisa').addEventListener('keyup', function () {
-
-l=classProduto.pesquisar()
-
+    this.document.getElementById('campoPesquisa').addEventListener('keyup', function () {
+        classProduto.pesquisar()
+    })
 })
-
-
-})
-
-
 

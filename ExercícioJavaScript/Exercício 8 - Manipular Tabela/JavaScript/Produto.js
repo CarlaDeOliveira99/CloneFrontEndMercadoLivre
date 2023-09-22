@@ -7,6 +7,7 @@ class Produto {
     precoFinal;
     arrayProduto;
 
+
     constructor() {
         this.id = 1
         this.descricao = ''
@@ -15,6 +16,7 @@ class Produto {
         this.precoInicial = 0
         this.precoFinal = 0
         this.arrayProduto = [];
+
     }
 
     coletarDados() {
@@ -109,6 +111,7 @@ class Produto {
 
             tdacoes.appendChild(imgExcluir)
             tdacoes.appendChild(imgEditar)
+
 
             // alterar os dados da tabela
             imgEditar.addEventListener('click', (event) => {
@@ -247,6 +250,377 @@ class Produto {
             return this.atualizarTabela()
         }
     }
+
+
+        ordenarCodigo(imgSelecionada) {
+
+            let tr = document.getElementsByClassName('trInfor')
+
+            let listaProduto = []
+
+            Array.from(tr).forEach(element => {
+                let td = element.childNodes
+
+                let produto = {}
+                produto.id = td[0].innerText
+                produto.descricao = td[1].innerText
+                produto.quantidade = td[2].innerText
+                produto.unidade = td[3].innerText
+                produto.precoInicial = td[4].innerText
+                produto.precoFinal = td[5].innerText
+
+                listaProduto.push(produto)
+
+            })
+
+            switch (imgSelecionada) {
+                case 1:
+                    listaProduto.sort(function (a, b) {
+                        if (a.id < b.id) {
+                            return -1;
+                        } else {
+                            return true;
+                        }
+                    });
+                    this.arrayProduto = listaProduto
+                    this.atualizarTabela()
+                    break;
+                case 2:
+
+                listaProduto.sort(function (a, b) {
+                    if (a.id > b.id) {
+                        return -1;
+                    } else {
+                        return true;
+                    }
+                });
+                this.arrayProduto = listaProduto
+                this.atualizarTabela()
+                    break;
+                case 3:
+                    listaProduto.sort(function (a, b) {
+                        if (a.id < b.id) {
+                            return -1;
+                        } else {
+                            return true;
+                        }
+                    });
+                    this.arrayProduto = listaProduto
+                    this.atualizarTabela()
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        ordenarProduto(imgSelecionada) {
+
+            let tr = document.getElementsByClassName('trInfor')
+
+            let listaProduto = []
+
+            Array.from(tr).forEach(element => {
+                let td = element.childNodes
+
+                let produto = {}
+                produto.id = td[0].innerText
+                produto.descricao = td[1].innerText
+                produto.quantidade = td[2].innerText
+                produto.unidade = td[3].innerText
+                produto.precoInicial = td[4].innerText
+                produto.precoFinal = td[5].innerText
+
+                listaProduto.push(produto)
+
+            })
+
+            switch (imgSelecionada) {
+                case 1:
+                    listaProduto.sort(function (a, b) {
+                        if (a.descricao < b.descricao) {
+                            return -1;
+                        } else {
+                            return true;
+                        }
+                    });
+                    this.arrayProduto = listaProduto
+                    this.atualizarTabela()
+                    break;
+                case 2:
+
+                listaProduto.sort(function (a, b) {
+                    if (a.descricao > b.descricao) {
+                        return -1;
+                    } else {
+                        return true;
+                    }
+                });
+                this.arrayProduto = listaProduto
+                this.atualizarTabela()
+                    break;
+                case 3:
+                    listaProduto.sort(function (a, b) {
+                        if (a.id < b.id) {
+                            return -1;
+                        } else {
+                            return true;
+                        }
+                    });
+                    this.arrayProduto = listaProduto
+                    this.atualizarTabela()
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        ordenarQuantidade(imgSelecionada) {
+
+            let tr = document.getElementsByClassName('trInfor')
+
+            let listaProduto = []
+
+            Array.from(tr).forEach(element => {
+                let td = element.childNodes
+
+                let produto = {}
+                produto.id = td[0].innerText
+                produto.descricao = td[1].innerText
+                produto.quantidade = td[2].innerText
+                produto.unidade = td[3].innerText
+                produto.precoInicial = td[4].innerText
+                produto.precoFinal = td[5].innerText
+
+                listaProduto.push(produto)
+
+            })
+
+            switch (imgSelecionada) {
+                case 1:
+                    listaProduto.sort(function (a, b) {
+                        if (a.quantidade < b.quantidade) {
+                            console.log(listaProduto);
+                            return -1;
+                        } else {
+                            console.log(listaProduto);
+                            return true;
+                        }
+                    });
+                    this.arrayProduto = listaProduto
+                    this.atualizarTabela()
+                    break;
+                case 2:
+
+                listaProduto.sort(function (a, b) {
+                    if (a.quantidade > b.quantidade) {
+                        return -1;
+                    } else {
+                        return true;
+                    }
+                });
+                this.arrayProduto = listaProduto
+                this.atualizarTabela()
+                    break;
+                case 3:
+                    listaProduto.sort(function (a, b) {
+                        if (a.id < b.id) {
+                            return -1;
+                        } else {
+                            return true;
+                        }
+                    });
+                    this.arrayProduto = listaProduto
+                    this.atualizarTabela()
+                    break;
+                default:
+                    break;
+            }
+        }
+
+
+        ordenarUnidade(imgSelecionada) {
+
+            let tr = document.getElementsByClassName('trInfor')
+
+            let listaProduto = []
+
+            Array.from(tr).forEach(element => {
+                let td = element.childNodes
+
+                let produto = {}
+                produto.id = td[0].innerText
+                produto.descricao = td[1].innerText
+                produto.quantidade = td[2].innerText
+                produto.unidade = td[3].innerText
+                produto.precoInicial = td[4].innerText
+                produto.precoFinal = td[5].innerText
+
+                listaProduto.push(produto)
+
+            })
+
+            switch (imgSelecionada) {
+                case 1:
+                    listaProduto.sort(function (a, b) {
+                        if (a.unidade < b.unidade) {
+                            return -1;
+                        } else {
+                            return true;
+                        }
+                    });
+                    this.arrayProduto = listaProduto
+                    this.atualizarTabela()
+                    break;
+                case 2:
+
+                listaProduto.sort(function (a, b) {
+                    if (a.unidade > b.unidade) {
+                        return -1;
+                    } else {
+                        return true;
+                    }
+                });
+                this.arrayProduto = listaProduto
+                this.atualizarTabela()
+                    break;
+                case 3:
+                    listaProduto.sort(function (a, b) {
+                        if (a.id < b.id) {
+                            return -1;
+                        } else {
+                            return true;
+                        }
+                    });
+                    this.arrayProduto = listaProduto
+                    this.atualizarTabela()
+                    break;
+                default:
+                    break;
+            }
+        }
+
+
+        ordenarPrecoInicial(imgSelecionada) {
+
+            let tr = document.getElementsByClassName('trInfor')
+
+            let listaProduto = []
+
+            Array.from(tr).forEach(element => {
+                let td = element.childNodes
+
+                let produto = {}
+                produto.id = td[0].innerText
+                produto.descricao = td[1].innerText
+                produto.quantidade = td[2].innerText
+                produto.unidade = td[3].innerText
+                produto.precoInicial = td[4].innerText
+                produto.precoFinal = td[5].innerText
+
+                listaProduto.push(produto)
+
+            })
+
+            switch (imgSelecionada) {
+                case 1:
+                    listaProduto.sort(function (a, b) {
+                        if (a.precoInicial < b.precoInicial) {
+                            return -1;
+                        } else {
+                            return true;
+                        }
+                    });
+                    this.arrayProduto = listaProduto
+                    this.atualizarTabela()
+                    break;
+                case 2:
+
+                listaProduto.sort(function (a, b) {
+                    if (a.precoInicial > b.precoInicial) {
+                        return -1;
+                    } else {
+                        return true;
+                    }
+                });
+                this.arrayProduto = listaProduto
+                this.atualizarTabela()
+                    break;
+                case 3:
+                    listaProduto.sort(function (a, b) {
+                        if (a.id < b.id) {
+                            return -1;
+                        } else {
+                            return true;
+                        }
+                    });
+                    this.arrayProduto = listaProduto
+                    this.atualizarTabela()
+                    break;
+                default:
+                    break;
+            }
+        }
+
+
+        ordenarPrecoFinal(imgSelecionada) {
+
+            let tr = document.getElementsByClassName('trInfor')
+
+            let listaProduto = []
+
+            Array.from(tr).forEach(element => {
+                let td = element.childNodes
+
+                let produto = {}
+                produto.id = td[0].innerText
+                produto.descricao = td[1].innerText
+                produto.quantidade = td[2].innerText
+                produto.unidade = td[3].innerText
+                produto.precoInicial = td[4].innerText
+                produto.precoFinal = td[5].innerText
+
+                listaProduto.push(produto)
+            })
+
+            switch (imgSelecionada) {
+                case 1:
+                    listaProduto.sort(function (a, b) {
+                        if (a.precoFinal < b.pre) {
+                            return -1;
+                        } else {
+                            return true;
+                        }
+                    });
+                    this.arrayProduto = listaProduto
+                    this.atualizarTabela()
+                    break;
+                case 2:
+
+                listaProduto.sort(function (a, b) {
+                    if (a.precoFinal > b.precoFinal) {
+                        return -1;
+                    } else {
+                        return true;
+                    }
+                });
+                this.arrayProduto = listaProduto
+                this.atualizarTabela()
+                    break;
+                case 3:
+                    listaProduto.sort(function (a, b) {
+                        if (a.id < b.id) {
+                            return -1;
+                        } else {
+                            return true;
+                        }
+                    });
+                    this.arrayProduto = listaProduto
+                    this.atualizarTabela()
+                    break;
+                default:
+                    break;
+            }
+
+    }
+
 }
-
-

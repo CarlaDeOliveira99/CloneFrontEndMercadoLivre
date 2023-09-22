@@ -27,17 +27,20 @@
         </div>
         </div>
 
+
+
+<!--  -->
+
         <table>
             <thead>
                 <tr id="linhaTituloTab">
-                    <td class="titulo" id="titulo1">Cód
-                    </td>
-                    <td class="titulo" id="titulo2">Produto</td>
-                    <td class="titulo" id="titulo3">Quantidade</td>
-                    <td class="titulo" id="titulo4">Unidade</td>
-                    <td class="titulo" id="titulo5">Preço de compra</td>
-                    <td class="titulo" id="titulo6">Preço de Venda</td>
-                    <td class="titulo" id="titulo7">Editar</td>
+                    <td class="titulo" id="titulo1">Cód <img class="imgSeta" id="imgCod" src=""></td>
+                    <td class="titulo" id="titulo2">Produto <img class="imgSeta" id="imgPro" src=""></td>
+                    <td class="titulo" id="titulo3">Quantidade <img class="imgSeta" id="imgQua" src=""> </td>
+                    <td class="titulo" id="titulo4">Unidade <img class="imgSeta" id="imgUni" src=""></td>
+                    <td class="titulo" id="titulo5">Preço de compra <img class="imgSeta" id="imgPreIni" src=""> </td>
+                    <td class="titulo" id="titulo6">Preço de Venda <img class="imgSeta" id="imgPreFin" src=""></td>
+                    <td class="titulo" id="titulo7">Editar </td>
                 </tr>
             </thead>
             <tbody id="tbody">
@@ -53,7 +56,7 @@
             <h1>Cadastrar Produto</h1>
             <div id="txtCadastro">
                 <p><input id="campoID" type="hidden"></p>
-                <p id="txtProduto">Produto <input id="campoProd" type="text"></p>
+                <p id="txtProduto">Produto <input id="campoProd" type="text" ></p>
                 <span id="txtQuantidade">Quantidade <input id="quantidade" class="campoDados" type="number" step="1"
                         min="1"></span>
                 <span id="txtUnidade">Unidade <input class="campoDados" id="unidade" type="text" min="0"></span>
@@ -88,6 +91,7 @@
         <script src="JavaScript/ModalCadastro.js" async defer></script>
         <script src="JavaScript/ModalExcluir.js" async defer></script>
         <script src="JavaScript/Scprit.js" async defer></script>
+        <script src="JavaScript/Ordenar.js" async defer></script>
         <script>
             $(function () {
                 $(".campoPreco").maskMoney();

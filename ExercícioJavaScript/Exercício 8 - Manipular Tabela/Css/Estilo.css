@@ -3,6 +3,7 @@ body {
     padding: 16px;
 }
 
+
 #anuciado {
     display: grid;
     justify-content: center;
@@ -18,7 +19,7 @@ body {
 
 #areaTabela {
     margin: 0 auto;
-    width: 850px;
+    width: 950px;
     height: 100%;
 }
 
@@ -27,7 +28,7 @@ body {
 #cabecalhoPesquisaAdicionar {
     margin: 5% auto;
     background-color: #357381;
-    width: 850px;
+    width: 950px;
     height: 80px;
     margin-bottom: 0;
 }
@@ -78,8 +79,6 @@ input[name='campoPesquisa'] {
 
 /* Parte da tabela */
 
-
-
 .titulo {
     padding-top: 1%;
     padding-bottom: 1%;
@@ -88,6 +87,12 @@ input[name='campoPesquisa'] {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 10pt;
 
+
+}
+
+.imgSeta{
+    float: right;
+    margin-right: 2px;
 
 }
 
