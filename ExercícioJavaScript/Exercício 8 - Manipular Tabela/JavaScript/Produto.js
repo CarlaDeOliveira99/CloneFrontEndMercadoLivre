@@ -108,9 +108,10 @@ class Produto {
             let imgExcluir = document.createElement('img')
             imgExcluir.src = 'icone/lixeira.png'
             imgExcluir.classList.add('imgPadrao')
-
-            tdacoes.appendChild(imgExcluir)
+            
             tdacoes.appendChild(imgEditar)
+            tdacoes.appendChild(imgExcluir)
+           
 
 
             // alterar os dados da tabela
@@ -250,7 +251,6 @@ class Produto {
             return this.atualizarTabela()
         }
     }
-
 
         ordenarCodigo(imgSelecionada) {
 
@@ -437,7 +437,6 @@ class Produto {
             }
         }
 
-
         ordenarUnidade(imgSelecionada) {
 
             let tr = document.getElementsByClassName('trInfor')
@@ -499,7 +498,6 @@ class Produto {
             }
         }
 
-
         ordenarPrecoInicial(imgSelecionada) {
 
             let tr = document.getElementsByClassName('trInfor')
@@ -560,7 +558,6 @@ class Produto {
                     break;
             }
         }
-
 
         ordenarPrecoFinal(imgSelecionada) {
 
