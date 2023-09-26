@@ -72,7 +72,7 @@ body {
 }
 
 input[name='campoPesquisa'] {
-    background: url(../icone/lupa-de-pesquisa.png) ;
+    background: url(../icone/lupaDePesquisa.png) ;
     background-repeat: no-repeat;
     background-position: top 5px left 3px;
 }

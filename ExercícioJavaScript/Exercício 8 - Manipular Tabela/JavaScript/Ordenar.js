@@ -6,132 +6,82 @@ window.addEventListener('load', function () {
     let imgPrecoIni = document.getElementById('imgPreIni')
     let imgPrecoFin = document.getElementById('imgPreFin')
     let imgSelecionada = 0
-    var classProduto = new Produto();
-
-    imgCod.src = "icone/ambas as setas.png"
-    imgProd.src = "icone/ambas as setas.png"
-    imgQuat.src = "icone/ambas as setas.png"
-    imgUni.src = "icone/ambas as setas.png"
-    imgPrecoIni.src = "icone/ambas as setas.png"
-    imgPrecoFin.src = "icone/ambas as setas.png"
+    let tr = document.getElementById('linhaTituloTab')
+    let iconeSelecionado = 0
 
 
-    imgCod.addEventListener('click', (event) => {
-        let local = event.target
-        let flechaAtual = local.src
+    imgCod.src = "icone/ambasAsSetas.png"
+    imgProd.src = "icone/ambasAsSetas.png"
+    imgQuat.src = "icone/ambasAsSetas.png"
+    imgUni.src = "icone/ambasAsSetas.png"
+    imgPrecoIni.src = "icone/ambasAsSetas.png"
+    imgPrecoFin.src = "icone/ambasAsSetas.png"
 
-        if (flechaAtual == 'http://127.0.0.1:5500/Exerc%C3%ADcio%208%20-%20Manipular%20Tabela/icone/ambas%20as%20setas.png') {
-            imgCod.src = 'icone/ordenar cima.png'
-            imgSelecionada = 1
-        } else if (flechaAtual == 'http://127.0.0.1:5500/Exerc%C3%ADcio%208%20-%20Manipular%20Tabela/icone/ordenar%20cima.png') {
-            imgCod.src = 'icone/ordenar baixo.png'
-            imgSelecionada = 2
-        } else if (flechaAtual == 'http://127.0.0.1:5500/Exerc%C3%ADcio%208%20-%20Manipular%20Tabela/icone/ordenar%20baixo.png') {
-            imgCod.src = 'icone/ambas as setas.png'
-            imgSelecionada = 3
+
+
+    tr.addEventListener('click', (event) => {
+        td = event.target
+
+        acessoCategoria = td.childNodes
+
+        if (acessoCategoria.length > 0) {
+            tdSrcDaImg = acessoCategoria[1].attributes.src.nodeValue
+            acessoImgSrc = ''
+            categoria = td.innerText
+        } else {
+            acessoImgSrc = td.attributes.src.nodeValue
+            tdSrcDaImg = ''
+            categoria = td.parentElement.innerText
+
         }
 
-
-        classProduto.ordenarCodigo(imgSelecionada)
-
-    })
-
-    imgProd.addEventListener('click', (event) => {
-        let local = event.target
-        let flechaAtual = local.src
-
-        if (flechaAtual == 'http://127.0.0.1:5500/Exerc%C3%ADcio%208%20-%20Manipular%20Tabela/icone/ambas%20as%20setas.png') {
-            imgProd.src = 'icone/ordenar cima.png'
-            imgSelecionada = 1
-        } else if (flechaAtual == 'http://127.0.0.1:5500/Exerc%C3%ADcio%208%20-%20Manipular%20Tabela/icone/ordenar%20cima.png') {
-            imgProd.src = 'icone/ordenar baixo.png'
-            imgSelecionada = 2
-        } else if (flechaAtual == 'http://127.0.0.1:5500/Exerc%C3%ADcio%208%20-%20Manipular%20Tabela/icone/ordenar%20baixo.png') {
-            imgProd.src = 'icone/ambas as setas.png'
-            imgSelecionada = 3
+        if (tdSrcDaImg == "icone/ambasAsSetas.png" || acessoImgSrc == "icone/ambasAsSetas.png") {
+            if (categoria == "Cód") {
+                imgCod.src = "icone/ordenarCima.png"
+            } else if (categoria == "Produto") {
+                imgProd.src = "icone/ordenarCima.png"
+            } else if (categoria == "Quantidade") {
+                imgQuat.src = "icone/ordenarCima.png"
+            } else if (categoria == "Unidade") {
+                imgUni.src = "icone/ordenarCima.png"
+            } else if (categoria == "Preço de Compra") {
+                imgPrecoIni.src = "icone/ordenarCima.png"
+            } else if (categoria == "Preço de Venda") {
+                imgPrecoFin.src = "icone/ordenarCima.png"
+            }
+            iconeSelecionado = 1
+        } else if (tdSrcDaImg == "icone/ordenarCima.png" || acessoImgSrc == "icone/ordenarCima.png") {
+            if (categoria == "Cód") {
+                imgCod.src = "icone/ordenarBaixo.png"
+            } else if (categoria == "Produto") {
+                imgProd.src = "icone/ordenarBaixo.png"
+            } else if (categoria == "Quantidade") {
+                imgQuat.src = "icone/ordenarBaixo.png"
+            } else if (categoria == "Unidade") {
+                imgUni.src = "icone/ordenarBaixo.png"
+            } else if (categoria == "Preço de Compra") {
+                imgPrecoIni.src = "icone/ordenarBaixo.png"
+            } else if (categoria == "Preço de Venda") {
+                imgPrecoFin.src = "icone/ordenarBaixo.png"
+            }
+            iconeSelecionado = 2
+        } else if (tdSrcDaImg == "icone/ordenarBaixo.png" || acessoImgSrc == "icone/ordenarBaixo.png") {
+            if (categoria == "Cód") {
+                imgCod.src = "icone/ambasAsSetas.png"
+            } else if (categoria == "Produto") {
+                imgProd.src = "icone/ambasAsSetas.png"
+            } else if (categoria == "Quantidade") {
+                imgQuat.src = "icone/ambasAsSetas.png"
+            } else if (categoria == "Unidade") {
+                imgUni.src = "icone/ambasAsSetas.png"
+            } else if (categoria == "Preço de Compra") {
+                imgPrecoIni.src = "icone/ambasAsSetas.png"
+            } else if (categoria == "Preço de Venda") {
+                imgPrecoFin.src = "icone/ambasAsSetas.png"
+            }
+            iconeSelecionado = 3
         }
 
-        classProduto.ordenarProduto(imgSelecionada)
-
+        classProduto.ordenarTabela(categoria, iconeSelecionado)
     })
-
-    imgQuat.addEventListener('click', (event) => {
-        let local = event.target
-        let flechaAtual = local.src
-
-        if (flechaAtual == 'http://127.0.0.1:5500/Exerc%C3%ADcio%208%20-%20Manipular%20Tabela/icone/ambas%20as%20setas.png') {
-            imgQuat.src = 'icone/ordenar cima.png'
-            imgSelecionada = 1
-        } else if (flechaAtual == 'http://127.0.0.1:5500/Exerc%C3%ADcio%208%20-%20Manipular%20Tabela/icone/ordenar%20cima.png') {
-            imgQuat.src = 'icone/ordenar baixo.png'
-            imgSelecionada = 2
-        } else if (flechaAtual == 'http://127.0.0.1:5500/Exerc%C3%ADcio%208%20-%20Manipular%20Tabela/icone/ordenar%20baixo.png') {
-            imgQuat.src = 'icone/ambas as setas.png'
-            imgSelecionada = 3
-        }
-
-        classProduto.ordenarQuantidade(imgSelecionada)
-
-    })
-
-    imgUni.addEventListener('click', (event) => {
-        let local = event.target
-        let flechaAtual = local.src
-
-
-
-        if (flechaAtual == 'http://127.0.0.1:5500/Exerc%C3%ADcio%208%20-%20Manipular%20Tabela/icone/ambas%20as%20setas.png') {
-            imgUni.src = 'icone/ordenar cima.png'
-            imgSelecionada = 1
-        } else if (flechaAtual == 'http://127.0.0.1:5500/Exerc%C3%ADcio%208%20-%20Manipular%20Tabela/icone/ordenar%20cima.png') {
-            imgUni.src = 'icone/ordenar baixo.png'
-            imgSelecionada = 2
-        } else if (flechaAtual == 'http://127.0.0.1:5500/Exerc%C3%ADcio%208%20-%20Manipular%20Tabela/icone/ordenar%20baixo.png') {
-            imgUni.src = 'icone/ambas as setas.png'
-            imgSelecionada = 3
-        }
-
-        classProduto.ordenarUnidade(imgSelecionada)
-
-    })
-
-    imgPrecoIni.addEventListener('click', (event) => {
-        let local = event.target
-        let flechaAtual = local.src
-        if (flechaAtual == 'http://127.0.0.1:5500/Exerc%C3%ADcio%208%20-%20Manipular%20Tabela/icone/ambas%20as%20setas.png') {
-            imgPrecoIni.src = 'icone/ordenar cima.png'
-            imgSelecionada = 1
-        } else if (flechaAtual == 'http://127.0.0.1:5500/Exerc%C3%ADcio%208%20-%20Manipular%20Tabela/icone/ordenar%20cima.png') {
-            imgPrecoIni.src = 'icone/ordenar baixo.png'
-            imgSelecionada = 2
-        } else if (flechaAtual == 'http://127.0.0.1:5500/Exerc%C3%ADcio%208%20-%20Manipular%20Tabela/icone/ordenar%20baixo.png') {
-            imgPrecoIni.src = 'icone/ambas as setas.png'
-            imgSelecionada = 3
-        }
-
-        classProduto.ordenarPrecoInicial(imgSelecionada)
-
-    })
-
-    imgPrecoFin.addEventListener('click', (event) => {
-        let local = event.target
-        let flechaAtual = local.src
-
-        if (flechaAtual == 'http://127.0.0.1:5500/Exerc%C3%ADcio%208%20-%20Manipular%20Tabela/icone/ambas%20as%20setas.png') {
-            imgPrecoFin.src = 'icone/ordenar cima.png'
-            imgSelecionada = 1
-        } else if (flechaAtual == 'http://127.0.0.1:5500/Exerc%C3%ADcio%208%20-%20Manipular%20Tabela/icone/ordenar%20cima.png') {
-            imgPrecoFin.src = 'icone/ordenar baixo.png'
-            imgSelecionada = 2
-        } else if (flechaAtual == 'http://127.0.0.1:5500/Exerc%C3%ADcio%208%20-%20Manipular%20Tabela/icone/ordenar%20baixo.png') {
-            imgPrecoFin.src = 'icone/ambas as setas.png'
-            imgSelecionada = 3
-        }
-
-
-        classProduto.ordenarPrecoFinal(imgSelecionada)
-
-    })
-
-
 })

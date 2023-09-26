@@ -1,5 +1,7 @@
+
+var classProduto = new Produto();
+
 window.addEventListener('load', function () {
-    var classProduto = new Produto();
 
     this.document.getElementById('btnModalCadastrar').addEventListener('click', function () {
         classProduto.salvar();
@@ -35,5 +37,6 @@ window.addEventListener('load', function () {
     this.document.getElementById('campoPesquisa').addEventListener('keyup', function () {
         classProduto.pesquisar()
     })
+
 })
 

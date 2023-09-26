@@ -51,7 +51,7 @@ class Produto {
             msg += 'Informe a unidade do produto\n'
         }
         if (produto.precoInicial == '') {
-            msg += 'Informe o preço de compra do produto\n'
+            msg += 'Informe o Preço de Compra do produto\n'
         }
         if (produto.precoFinal == '') {
             msg += 'Informe o preço de venda do produto\n'
@@ -108,10 +108,10 @@ class Produto {
             let imgExcluir = document.createElement('img')
             imgExcluir.src = 'icone/lixeira.png'
             imgExcluir.classList.add('imgPadrao')
-            
+
             tdacoes.appendChild(imgEditar)
             tdacoes.appendChild(imgExcluir)
-           
+
 
 
             // alterar os dados da tabela
@@ -159,7 +159,7 @@ class Produto {
                 tdPrecoIni = armazenaCampoDeExcluir[4].innerHTML
                 tdPrecoFin = armazenaCampoDeExcluir[5].innerHTML
 
-                linhaSelecionadainformacoes = `<p>Código: ${tdID}</p><p>Produto: ${tdProduto}</p> <p>Quantidade: ${tdQuantidade}</p> <p> Total de unidade: ${tdUnidade}</p><p>Preço de compra: ${tdPrecoIni}</p><p>Preço de venda: ${tdPrecoFin}</p>`
+                linhaSelecionadainformacoes = `<p>Código: ${tdID}</p><p>Produto: ${tdProduto}</p> <p>Quantidade: ${tdQuantidade}</p> <p> Total de unidade: ${tdUnidade}</p><p>Preço de Compra: ${tdPrecoIni}</p><p>Preço de venda: ${tdPrecoFin}</p>`
                 let areaDoTexto = document.getElementById('textoDoExcluir')
 
                 areaDoTexto.innerHTML = linhaSelecionadainformacoes
@@ -219,13 +219,11 @@ class Produto {
 
     }
 
-    pesquisar() {
-
+    pesquisar(txtCampoPesquisa) {
         let campoPesquisaDigitado = document.getElementById('campoPesquisa')
         let tr = document.getElementsByClassName('trInfor')
-
         Array.from(tr).forEach(element => {
-            let inforLista = element.textContent.toLocaleLowerCase().trim()
+            let inforLista = element.textContent.toLocaleLowerCase()
             let txtCampoPesquisa = campoPesquisaDigitado.value.toLocaleLowerCase().trim()
 
             if (inforLista.includes(txtCampoPesquisa)) {
@@ -236,8 +234,18 @@ class Produto {
 
                     if (td[index].textContent.includes(txtCampoPesquisa)) {
                         let celula = td[index];
-                        celula.style.fontWeight = "bold"
-                        celula.style.fontSize = "13pt"
+                        let palavra = celula.textContent
+
+                        for (let index = 0; index < palavra.length; index++) {
+
+                            let letra = palavra[index]
+
+                            if (txtCampoPesquisa.includes(letra)) {
+                              
+                                
+                                console.log(letra);
+                            }
+                        }
                     }
                 }
             } else {
@@ -252,29 +260,32 @@ class Produto {
         }
     }
 
-        ordenarCodigo(imgSelecionada) {
 
-            let tr = document.getElementsByClassName('trInfor')
 
-            let listaProduto = []
+    ordenarTabela(categoria, iconeSelecionado) {
+        let tr = document.getElementsByClassName('trInfor')
+        let listaProduto = []
 
-            Array.from(tr).forEach(element => {
-                let td = element.childNodes
+        Array.from(tr).forEach(element => {
+            let td = element.childNodes
 
-                let produto = {}
-                produto.id = td[0].innerText
-                produto.descricao = td[1].innerText
-                produto.quantidade = td[2].innerText
-                produto.unidade = td[3].innerText
-                produto.precoInicial = td[4].innerText
-                produto.precoFinal = td[5].innerText
+            let produto = {}
+            produto.id = td[0].innerText
+            produto.descricao = td[1].innerText
+            let quantidade = td[2].innerText
+            produto.quantidade = parseFloat(quantidade)
+            produto.unidade = td[3].innerText
+            let precoIni = td[4].innerText
+            produto.precoInicial = parseFloat(precoIni)
+            let precoFin = td[5].innerText
+            produto.precoFinal = parseFloat(precoFin)
 
-                listaProduto.push(produto)
+            listaProduto.push(produto)
+        })
 
-            })
-
-            switch (imgSelecionada) {
-                case 1:
+        switch (iconeSelecionado) {
+            case 1:
+                if (categoria == "Cód") {
                     listaProduto.sort(function (a, b) {
                         if (a.id < b.id) {
                             return -1;
@@ -285,57 +296,7 @@ class Produto {
                     this.arrayProduto = listaProduto
                     this.atualizarTabela()
                     break;
-                case 2:
-
-                listaProduto.sort(function (a, b) {
-                    if (a.id > b.id) {
-                        return -1;
-                    } else {
-                        return true;
-                    }
-                });
-                this.arrayProduto = listaProduto
-                this.atualizarTabela()
-                    break;
-                case 3:
-                    listaProduto.sort(function (a, b) {
-                        if (a.id < b.id) {
-                            return -1;
-                        } else {
-                            return true;
-                        }
-                    });
-                    this.arrayProduto = listaProduto
-                    this.atualizarTabela()
-                    break;
-                default:
-                    break;
-            }
-        }
-
-        ordenarProduto(imgSelecionada) {
-
-            let tr = document.getElementsByClassName('trInfor')
-
-            let listaProduto = []
-
-            Array.from(tr).forEach(element => {
-                let td = element.childNodes
-
-                let produto = {}
-                produto.id = td[0].innerText
-                produto.descricao = td[1].innerText
-                produto.quantidade = td[2].innerText
-                produto.unidade = td[3].innerText
-                produto.precoInicial = td[4].innerText
-                produto.precoFinal = td[5].innerText
-
-                listaProduto.push(produto)
-
-            })
-
-            switch (imgSelecionada) {
-                case 1:
+                } else if (categoria == "Produto") {
                     listaProduto.sort(function (a, b) {
                         if (a.descricao < b.descricao) {
                             return -1;
@@ -346,84 +307,9 @@ class Produto {
                     this.arrayProduto = listaProduto
                     this.atualizarTabela()
                     break;
-                case 2:
-
-                listaProduto.sort(function (a, b) {
-                    if (a.descricao > b.descricao) {
-                        return -1;
-                    } else {
-                        return true;
-                    }
-                });
-                this.arrayProduto = listaProduto
-                this.atualizarTabela()
-                    break;
-                case 3:
-                    listaProduto.sort(function (a, b) {
-                        if (a.id < b.id) {
-                            return -1;
-                        } else {
-                            return true;
-                        }
-                    });
-                    this.arrayProduto = listaProduto
-                    this.atualizarTabela()
-                    break;
-                default:
-                    break;
-            }
-        }
-
-        ordenarQuantidade(imgSelecionada) {
-
-            let tr = document.getElementsByClassName('trInfor')
-
-            let listaProduto = []
-
-            Array.from(tr).forEach(element => {
-                let td = element.childNodes
-
-                let produto = {}
-                produto.id = td[0].innerText
-                produto.descricao = td[1].innerText
-                produto.quantidade = td[2].innerText
-                produto.unidade = td[3].innerText
-                produto.precoInicial = td[4].innerText
-                produto.precoFinal = td[5].innerText
-
-                listaProduto.push(produto)
-
-            })
-
-            switch (imgSelecionada) {
-                case 1:
+                } else if (categoria == "Quantidade") {
                     listaProduto.sort(function (a, b) {
                         if (a.quantidade < b.quantidade) {
-                            console.log(listaProduto);
-                            return -1;
-                        } else {
-                            console.log(listaProduto);
-                            return true;
-                        }
-                    });
-                    this.arrayProduto = listaProduto
-                    this.atualizarTabela()
-                    break;
-                case 2:
-
-                listaProduto.sort(function (a, b) {
-                    if (a.quantidade > b.quantidade) {
-                        return -1;
-                    } else {
-                        return true;
-                    }
-                });
-                this.arrayProduto = listaProduto
-                this.atualizarTabela()
-                    break;
-                case 3:
-                    listaProduto.sort(function (a, b) {
-                        if (a.id < b.id) {
                             return -1;
                         } else {
                             return true;
@@ -432,34 +318,7 @@ class Produto {
                     this.arrayProduto = listaProduto
                     this.atualizarTabela()
                     break;
-                default:
-                    break;
-            }
-        }
-
-        ordenarUnidade(imgSelecionada) {
-
-            let tr = document.getElementsByClassName('trInfor')
-
-            let listaProduto = []
-
-            Array.from(tr).forEach(element => {
-                let td = element.childNodes
-
-                let produto = {}
-                produto.id = td[0].innerText
-                produto.descricao = td[1].innerText
-                produto.quantidade = td[2].innerText
-                produto.unidade = td[3].innerText
-                produto.precoInicial = td[4].innerText
-                produto.precoFinal = td[5].innerText
-
-                listaProduto.push(produto)
-
-            })
-
-            switch (imgSelecionada) {
-                case 1:
+                } else if (categoria == "Unidade") {
                     listaProduto.sort(function (a, b) {
                         if (a.unidade < b.unidade) {
                             return -1;
@@ -470,57 +329,7 @@ class Produto {
                     this.arrayProduto = listaProduto
                     this.atualizarTabela()
                     break;
-                case 2:
-
-                listaProduto.sort(function (a, b) {
-                    if (a.unidade > b.unidade) {
-                        return -1;
-                    } else {
-                        return true;
-                    }
-                });
-                this.arrayProduto = listaProduto
-                this.atualizarTabela()
-                    break;
-                case 3:
-                    listaProduto.sort(function (a, b) {
-                        if (a.id < b.id) {
-                            return -1;
-                        } else {
-                            return true;
-                        }
-                    });
-                    this.arrayProduto = listaProduto
-                    this.atualizarTabela()
-                    break;
-                default:
-                    break;
-            }
-        }
-
-        ordenarPrecoInicial(imgSelecionada) {
-
-            let tr = document.getElementsByClassName('trInfor')
-
-            let listaProduto = []
-
-            Array.from(tr).forEach(element => {
-                let td = element.childNodes
-
-                let produto = {}
-                produto.id = td[0].innerText
-                produto.descricao = td[1].innerText
-                produto.quantidade = td[2].innerText
-                produto.unidade = td[3].innerText
-                produto.precoInicial = td[4].innerText
-                produto.precoFinal = td[5].innerText
-
-                listaProduto.push(produto)
-
-            })
-
-            switch (imgSelecionada) {
-                case 1:
+                } else if (categoria == "Preço de Compra") {
                     listaProduto.sort(function (a, b) {
                         if (a.precoInicial < b.precoInicial) {
                             return -1;
@@ -531,21 +340,9 @@ class Produto {
                     this.arrayProduto = listaProduto
                     this.atualizarTabela()
                     break;
-                case 2:
-
-                listaProduto.sort(function (a, b) {
-                    if (a.precoInicial > b.precoInicial) {
-                        return -1;
-                    } else {
-                        return true;
-                    }
-                });
-                this.arrayProduto = listaProduto
-                this.atualizarTabela()
-                    break;
-                case 3:
+                } else if (categoria == "Preço de Venda") {
                     listaProduto.sort(function (a, b) {
-                        if (a.id < b.id) {
+                        if (a.precoFinal < b.precoFinal) {
                             return -1;
                         } else {
                             return true;
@@ -554,70 +351,90 @@ class Produto {
                     this.arrayProduto = listaProduto
                     this.atualizarTabela()
                     break;
-                default:
+                }
+
+            case 2:
+                if (categoria == "Cód") {
+                    listaProduto.sort(function (a, b) {
+                        if (a.id > b.id) {
+                            return -1;
+                        } else {
+                            return true;
+                        }
+                    });
+                    this.arrayProduto = listaProduto
+                    this.atualizarTabela()
                     break;
-            }
+                } else if (categoria == "Produto") {
+                    listaProduto.sort(function (a, b) {
+                        if (a.descricao > b.descricao) {
+                            return -1;
+                        } else {
+                            return true;
+                        }
+                    });
+                    this.arrayProduto = listaProduto
+                    this.atualizarTabela()
+                    break;
+                } else if (categoria == "Quantidade") {
+                    listaProduto.sort(function (a, b) {
+                        if (a.quantidade > b.quantidade) {
+                            return -1;
+                        } else {
+                            return true;
+                        }
+                    });
+                    this.arrayProduto = listaProduto
+                    this.atualizarTabela()
+                    break;
+                } else if (categoria == "Unidade") {
+                    listaProduto.sort(function (a, b) {
+                        if (a.unidade > b.unidade) {
+                            return -1;
+                        } else {
+                            return true;
+                        }
+                    });
+                    this.arrayProduto = listaProduto
+                    this.atualizarTabela()
+                    break;
+                } else if (categoria == "Preço de Compra") {
+                    listaProduto.sort(function (a, b) {
+                        if (a.precoInicial > b.precoInicial) {
+                            return -1;
+                        } else {
+                            return true;
+                        }
+                    });
+                    this.arrayProduto = listaProduto
+                    this.atualizarTabela()
+                    break;
+                } else if (categoria == "Preço de Venda") {
+                    listaProduto.sort(function (a, b) {
+                        if (a.precoFinal > b.precoFinal) {
+                            return -1;
+                        } else {
+                            return true;
+                        }
+                    });
+                    this.arrayProduto = listaProduto
+                    this.atualizarTabela()
+                    break;
+                }
+            case 3:
+                listaProduto.sort(function (a, b) {
+                    if (a.id < b.id) {
+                        return -1;
+                    } else {
+                        return true;
+                    }
+                });
+                this.arrayProduto = listaProduto
+                this.atualizarTabela()
+                break;
+            default:
+                break;
         }
-
-        ordenarPrecoFinal(imgSelecionada) {
-
-            let tr = document.getElementsByClassName('trInfor')
-
-            let listaProduto = []
-
-            Array.from(tr).forEach(element => {
-                let td = element.childNodes
-
-                let produto = {}
-                produto.id = td[0].innerText
-                produto.descricao = td[1].innerText
-                produto.quantidade = td[2].innerText
-                produto.unidade = td[3].innerText
-                produto.precoInicial = td[4].innerText
-                produto.precoFinal = td[5].innerText
-
-                listaProduto.push(produto)
-            })
-
-            switch (imgSelecionada) {
-                case 1:
-                    listaProduto.sort(function (a, b) {
-                        if (a.precoFinal < b.pre) {
-                            return -1;
-                        } else {
-                            return true;
-                        }
-                    });
-                    this.arrayProduto = listaProduto
-                    this.atualizarTabela()
-                    break;
-                case 2:
-
-                listaProduto.sort(function (a, b) {
-                    if (a.precoFinal > b.precoFinal) {
-                        return -1;
-                    } else {
-                        return true;
-                    }
-                });
-                this.arrayProduto = listaProduto
-                this.atualizarTabela()
-                    break;
-                case 3:
-                    listaProduto.sort(function (a, b) {
-                        if (a.id < b.id) {
-                            return -1;
-                        } else {
-                            return true;
-                        }
-                    });
-                    this.arrayProduto = listaProduto
-                    this.atualizarTabela()
-                    break;
-                default:
-                    break;
-            }
-
     }
 
 }
