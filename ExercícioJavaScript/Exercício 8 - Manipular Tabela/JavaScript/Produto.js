@@ -219,33 +219,33 @@ class Produto {
 
     }
 
-    pesquisar(txtCampoPesquisa) {
+    pesquisar() {
         let campoPesquisaDigitado = document.getElementById('campoPesquisa')
         let tr = document.getElementsByClassName('trInfor')
         Array.from(tr).forEach(element => {
-            let inforLista = element.textContent.toLocaleLowerCase()
+            let inforLista = element.textContent.toLocaleLowerCase().trim()
             let txtCampoPesquisa = campoPesquisaDigitado.value.toLocaleLowerCase().trim()
 
             if (inforLista.includes(txtCampoPesquisa)) {
-
                 let td = element.childNodes
 
                 for (let index = 0; index < td.length; index++) {
 
                     if (td[index].textContent.includes(txtCampoPesquisa)) {
-                        let celula = td[index];
-                        let palavra = celula.textContent
+                        let celula = td[index]
+                        let texto = celula.textContent.split(' ')
 
-                        for (let index = 0; index < palavra.length; index++) {
-
-                            let letra = palavra[index]
-
-                            if (txtCampoPesquisa.includes(letra)) {
-                              
-                                
-                                console.log(letra);
+                        for (let i = 0; i < texto.length; i++) {
+                            for (let j = 0; j < txtCampoPesquisa.length; j++) {
+                                let element = txtCampoPesquisa[j]
+                                if (texto[i].includes(element)) {
+                                    texto[i] = `<span>${texto[i]}</span>`
+                                }
                             }
                         }
+                        let textoCompleto = texto.join(" ")
+                        celula = textoCompleto
+                        td[index].innerHTML = celula
                     }
                 }
             } else {

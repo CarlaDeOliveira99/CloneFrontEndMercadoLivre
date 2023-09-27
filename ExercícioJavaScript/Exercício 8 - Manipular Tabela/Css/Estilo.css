@@ -3,6 +3,10 @@ body {
     padding: 16px;
 }
 
+span{
+    font-weight: bold;
+    font-size: 14pt;
+}
 
 #anuciado {
     display: grid;
@@ -76,6 +80,7 @@ input[name='campoPesquisa'] {
     background-repeat: no-repeat;
     background-position: top 5px left 3px;
 }
+
 
 /* Parte da tabela */
 
@@ -165,7 +170,7 @@ h1 {
 
 
 
-.campoDados {
+.campoDados{
     padding-left: 8px;
     font-size: 12pt;
     font-family: Arial, Helvetica, sans-serif;
