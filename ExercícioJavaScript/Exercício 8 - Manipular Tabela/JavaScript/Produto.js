@@ -272,13 +272,10 @@ class Produto {
             let produto = {}
             produto.id = td[0].innerText
             produto.descricao = td[1].innerText
-            let quantidade = td[2].innerText
-            produto.quantidade = parseFloat(quantidade)
+            produto.quantidade = td[2].innerText
             produto.unidade = td[3].innerText
-            let precoIni = td[4].innerText
-            produto.precoInicial = parseFloat(precoIni)
-            let precoFin = td[5].innerText
-            produto.precoFinal = parseFloat(precoFin)
+            produto.precoInicial = td[4].innerText
+            produto.precoFinal = td[5].innerText
 
             listaProduto.push(produto)
         })
