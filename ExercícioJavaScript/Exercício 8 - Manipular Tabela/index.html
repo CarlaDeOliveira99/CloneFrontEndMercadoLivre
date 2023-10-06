@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Manipulação de tabela </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Css/Estilo.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+    <script src="jquery-Money/src/jquery.maskMoney.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div>
+        <label for="anuciado" id="anuciado">Criar um grid de dados com as seguintes ações (adicionar linha, remover
+            linha, ordenar, e com um campo de pesquisa)</label>
+    </div>
+
+    <!-- Area acima da tabela onde possui os botões e barra de pesquisa -->
+    <div id="areaTabela">
+        <div id="cabecalhoPesquisaAdicionar">
+            <button class="btn" id="btnAdicionar">Adicionar</button>
+           <div id="Areapesquisar">
+           <input type="search" name="campoPesquisa" id="campoPesquisa">
+        </div>
+        </div>
+
+
+
+<!--  -->
+
+        <table>
+            <thead>
+                <tr id="linhaTituloTab">
+                    <td class="titulo" id="titulo1">Cód <img class="imgSeta" id="imgCod" src=""></td>
+                    <td class="titulo" id="titulo2">Produto <img class="imgSeta" id="imgPro" src=""></td>
+                    <td class="titulo" id="titulo3">Quantidade <img class="imgSeta" id="imgQua" src=""> </td>
+                    <td class="titulo" id="titulo4">Unidade <img class="imgSeta" id="imgUni" src=""></td>
+                    <td class="titulo" id="titulo5">Preço de Compra <img class="imgSeta" id="imgPreIni" src=""> </td>
+                    <td class="titulo" id="titulo6">Preço de Venda <img class="imgSeta" id="imgPreFin" src=""></td>
+                    <td class="titulo" id="titulo7">Editar </td>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Estrutura do modal Cadastro -->
+    <div id="modalFundo" class="hide"></div><!--fundo so modal-->
+    <div id="modal" class="hide"><!--modal-->
+        <div class="modalHeader"><!--cabeçalho-->
+            <button type="button" id="btnModalFechar"><img src="icone/voltar.png" alt=""></button>
+            <h1>Cadastrar Produto</h1>
+            <div id="txtCadastro">
+                <p><input id="campoID" type="hidden"></p>
+                <p id="txtProduto">Produto <input id="campoProd" type="text" ></p>
+                <span id="txtQuantidade">Quantidade <input id="quantidade" class="campoDados" type="number" step="1"
+                        min="1"></span>
+                <span id="txtUnidade">Unidade <input class="campoDados" id="unidade" type="text" min="0"></span>
+                <p id="txtPrecoIni" class="txtPreco">Preço de Compra <input id="precoInicial" class="campoPreco"
+                        type="text" data-thousands="." data-decimal="," data-prefix="R$ "></p>
+                <p id="txtPrecoFinal" class="txtPreco">Preço de Venda <input id="precoFinal" class="campoPreco"
+                        type="text" data-thousands="." data-decimal="," data-prefix="R$ "></p>
+            </div>
+        </div>
+        <div id="modalCorpo"><!--corpo-->
+            <button type="button" class="salvar" id="btnModalCadastrar">Salvar</button>
+            <button type="button" class="salvar" id="alterar">Atualizar</button>
+        </div>
+    </div>
+
+
+
+    <div id="modalFundoExcluir" class="esconder"></div><!--fundo so modal-->
+    <div id="modalExcluir" class="esconder"><!--modal-->
+        <div class="cabecalhoModalExcluir"><!--cabeçalho-->
+            <p><label for="tituloExcluir" id="tituloExcluir">Deseja Excluir?</label></p>
+            <p id="CampoDadosExcluir"> <label for="textoDoCampo" id="textoDoExcluir"></label></p>
+            <div id="botoesDoCampoExcluir">
+                <button type="button" class="btnDeExcluir" id="sim">Sim</button>
+                <button type="button" class="btnDeExcluir" id="nao">Não</button>
+            </div>
+        </div>
+
+        <script src="JavaScript/Produto.js" async defer></script>
+        <script src="JavaScript/ModalCadastro.js" async defer></script>
+        <script src="JavaScript/ModalExcluir.js" async defer></script>
+        <script src="JavaScript/Scprit.js" async defer></script>
+        <script src="JavaScript/Ordenar.js" async defer></script>
+        <script>
+            $(function () {
+                $(".campoPreco").maskMoney();
+            })
+        </script>
+
+</body>
+
+</html>

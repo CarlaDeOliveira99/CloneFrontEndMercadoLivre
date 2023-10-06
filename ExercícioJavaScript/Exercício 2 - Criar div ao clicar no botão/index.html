@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Exercício criar div</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        input {
+            display: block;
+            margin: 0 auto;
+        }
+
+        #btnDiv {
+            padding: 1%;
+            color: green;
+            font-weight: bold;
+            font-family: arial;
+            font-size: 12pt;
+            border: 2px solid darkslategray;
+            border-radius: 5%;
+            cursor: pointer;
+            background-color: white;
+            margin-bottom: 5%;
+            margin-top: 5%;
+    
+        }
+
+        #btnDiv:hover {
+           
+            background-color: rgb(215, 228, 192);
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+
+
+        #areaDiv {
+            background-color: aqua;
+            border: 2px solid black;
+            width: 20%;
+            height: 50vh;
+            overflow-y: auto;
+            display: flex;
+            margin: 0 auto;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            justify-content: center;
+        }
+
+        div {
+            background-color: rgb(177, 0, 201);
+            height: 50px;
+            width: 50px;
+            margin: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <input id="btnDiv" type="button" value="Adicionar Quadrado">
+
+    <div id="areaDiv"></div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

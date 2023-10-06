@@ -1,0 +1,390 @@
+body {
+    background-color: rgba(64, 57, 57, 1);
+    padding: 16px;
+}
+
+span{
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+#anuciado {
+    display: grid;
+    justify-content: center;
+    margin: 0 auto;
+    color: #FFF;
+    text-align: justify;
+    font-family: Arial;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 35px;
+}
+
+#areaTabela {
+    margin: 0 auto;
+    width: 950px;
+    height: 100%;
+}
+
+/* area acima da tabela */
+
+#cabecalhoPesquisaAdicionar {
+    margin: 5% auto;
+    background-color: #357381;
+    width: 950px;
+    height: 80px;
+    margin-bottom: 0;
+}
+
+#areaPesquisa {
+    background-color: #ff0000;
+
+}
+
+.btn {
+    background: #2CC91E;
+    color: #FFF;
+    text-align: center;
+    font-family: arial;
+    font-size: 16px;
+    font-style: normal;
+    border: none;
+    width: 90px;
+    height: 30px;
+    margin-top: 3%;
+    font-weight: bold;
+    margin-left: 2%;
+}
+
+.btn:hover {
+    background: #2cc91e7c;
+    cursor: pointer;
+}
+
+#campoPesquisa {
+    margin-top: -3%;
+    width: 320px;
+    height: 29px;
+    float: right;
+    margin-right: 11px;
+    background-color: #D9D9D9;
+    padding-left: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    font-weight: 600;
+}
+
+input[name='campoPesquisa'] {
+    background: url(../icone/lupaDePesquisa.png) ;
+    background-repeat: no-repeat;
+    background-position: top 5px left 3px;
+}
+
+
+/* Parte da tabela */
+
+.titulo {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+    color: #FFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+
+
+}
+
+.imgSeta{
+    float: right;
+    margin-right: 2px;
+
+}
+
+#titulo1 {
+    width: 60px;
+}
+
+#titulo2 {
+    width: 350px;
+}
+
+
+thead {
+    background: #357381;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table {
+    width: 100%;
+}
+
+tbody {
+    background-color: #EFEFEF;
+}
+
+/*Modal do cadastro*/
+
+
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    color: #ffffff;
+    margin-bottom: 5%;
+}
+
+#txtCadastro {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16pt;
+    letter-spacing: 2px;
+}
+
+#campoProd {
+    padding-left: 8px;
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 7px;
+    background: #D9D9D9;
+    border: none;
+    width: 350px;
+    height: 30px;
+
+}
+
+.campoPreco {
+    padding-left: 8px;
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 7px;
+    background: #D9D9D9;
+    border: none;
+    width: 100px;
+    height: 30px;
+}
+
+
+
+.campoDados{
+    padding-left: 8px;
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 7px;
+    background: #D9D9D9;
+    border: none;
+    width: 65px;
+    height: 30px;
+}
+
+
+#txtUnidade {
+    margin-left: 5%;
+}
+
+
+#btnModalFechar {
+    padding: .7% 2% 0.7%;
+    background-color: #888;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 16px;
+}
+
+.salvar {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 9.6px 19.2px;
+    background-color: #08284E;
+    color: #fff;
+    border: none;
+    border-radius: 13px;
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 16px;
+}
+
+#alterar {
+    display: none;
+}
+
+#btnModalFechar:hover {
+    opacity: 1;
+}
+
+.salvar:hover {
+    opacity: 1;
+    background-color: #0a16ff6c;
+}
+
+
+
+#modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    max-width: 90%;
+    background-color: #1b5663;
+    padding: 19.2px;
+    border-radius: 8px;
+    z-index: 10;
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+#modalCorpo {
+    margin-bottom: 16px;
+    display: grid;
+    justify-content: center
+}
+
+
+
+#modalFundo, #modalFundoExcluir {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 5;
+}
+
+
+#modalFundo, #modalExcluir,
+#modal {
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+    /*funcionar os eventos*/
+}
+
+/*sumir*/
+#modal.hide,
+#modalFundo.hide, #modalExcluir.esconder, #modalFundoExcluir.esconder {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+#modal.hide, #modalExcluir.esconder {
+    top: 0;
+}
+
+
+
+/* td da tabela */
+.center {
+    text-align: center;
+}
+
+
+
+.imgPadrao {
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+}
+
+
+.imgPadrao:hover {
+    transform: scale(1.2);
+}
+
+
+.trInfor:hover {
+    background-color: #7e7e7e62;
+    color: rgb(0, 0, 0);
+}
+
+.tdInfo {
+    padding-left: 4px;
+}
+
+
+
+
+
+/* modal Excluir */
+.cabecalhoModalExcluir {
+    display: inline;
+}
+
+#modalExcluir {
+    position: fixed;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    max-width: 90%;
+    background-color: #ffffff;
+    padding: 19.2px;
+    border-radius: 8px;
+    z-index: 10;
+}
+
+#tituloExcluir {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    font-weight: bold;
+    font-size: 15pt;
+    text-align: center;
+    margin-bottom: 5%;
+    margin-left: 30px;
+}
+
+#CampoDadosExcluir {
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+}
+
+#textoDoExcluir {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    color: #000000;
+}
+
+#botoesDoCampoExcluir {
+    display: flex;
+    justify-content: center;
+}
+
+
+.btnDeExcluir {
+    margin: 5px;
+    padding: 5px 10px 5px 10px;
+    font-family: arial;
+    font-weight: bold;
+    margin-right: 10px;
+    border: 1px solid #999999;
+    background-color: #e3e0e0;
+    border-radius: 5px;
+}
+
+.btnDeExcluir:hover {
+    background-color: #9f9e9e;
+    border: 1px solid #9f9e9e;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    cursor: pointer;
+    transition: 1s;
+}

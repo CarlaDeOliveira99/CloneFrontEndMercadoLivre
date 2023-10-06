@@ -1,0 +1,652 @@
+body {
+    background-color: #EBEBEB;
+    margin: 0px;
+}
+
+.areaInterna {
+    width: 100%;
+    background-color: rgb(5, 243, 231);
+    height: fit-content;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.barraDeNavegacao {
+    background-color: #FFF159;
+    width: 100%;
+    margin-bottom: 0px;
+    height: fit-content;
+}
+
+.card {
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 100%;
+}
+
+
+.areaBarra {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+}
+
+.mrgTop {
+    margin-top: .2%;
+}
+
+.mrg {
+    margin-top: 5px;
+}
+
+
+/*barra de pesquisa*/
+.areabarraDePesquisa {
+    margin-left: 5%;
+    height: fit-content;
+    width: 80%;
+    display: flex;
+    margin-right: 55px;
+}
+
+#barraDePesquisa {
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    font-size: 12pt;
+    font-family: Arial;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    cursor: text;
+    border-radius: 2px 0px 0px 2px;
+}
+
+#barraDePesquisa:hover {
+    border: 1px solid #3483fa;
+    border-radius: 2px 0px 0px 2px;
+}
+
+#btnLupa {
+    display: flex;
+    background-color: #ffffff;
+    border: #ffffff;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 0 2px 2px 0;
+}
+
+#imgLupa {
+    width: 100%;
+    height: 100%;
+}
+
+/* imagem da disney */
+#areaDisney {
+    height: fit-content;
+    width: fit-content;
+}
+
+.disneyMedidas {
+    height: 68%;
+    margin-right: 2px;
+    cursor: pointer;
+}
+
+#imgDisney {
+    height: 100%;
+    width: 100%;
+}
+
+/* area do icone de localização e endereço */
+.areaLocalizacao {
+    border: 1px solid transparent;
+    display: flex;
+    margin: 2px;
+    height: 34px;
+}
+
+.areaLocalizacao:hover {
+    border: 1px solid rgb(168, 168, 168);
+    border-radius: 5px;
+}
+
+#imgLocalizacao {
+    height: 18px;
+    width: 18px;
+    cursor: pointer;
+    margin: 2px;
+    margin-top: 3px;
+}
+
+.barraTxt {
+    font-size: 10pt;
+    font-family: Helvetica;
+    color: #6D6C6F;
+    cursor: pointer;
+    width: 120px;
+    margin-top: 5%;
+    padding: 2px;
+
+}
+
+/* menu do centro */
+
+.areaMenu {
+    display: flex;
+    margin-left: 3%;
+    width: 53%;
+    height: fit-content;
+    margin-left: 4%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.txtMenu {
+    font-size: 11pt;
+    font-family: Arial;
+    color: #6D6C6F;
+    margin-top: 2.2%;
+    margin-left: 1.5%;
+    margin-right: 5px;
+    opacity: .7;
+    padding-right: 3%;
+}
+
+.txtMenu:hover {
+    color: #000000;
+    cursor: pointer;
+    transition: 1s;
+    opacity: .9;
+}
+
+
+/* compra e conta */
+
+
+.areaCompra {
+    display: flex;
+    align-items: center;
+    width: 31%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.txtCompra{
+    font-size: 12pt;
+    font-family: Arial;
+    color: #1b1a1b;
+    cursor: pointer;
+    margin-top: 7px;
+    padding-top: 3%;
+}
+
+.blocoArea{
+    margin-right: 6%;
+    margin-left: 2%;
+}
+
+#imgCarrinhoCompra {
+    height: 20px;
+    width: 22px;
+} 
+
+
+/*postGrande*/
+
+#postGrande {
+    width: 100%;
+    height: 100%px;
+    margin-bottom: 2vh;
+    cursor: pointer;
+}
+
+#imgPostGrande {
+    width: 100%;
+}
+
+
+/*imagem primavera/verão*/
+
+.imgPostPadrao {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.postMedio {
+    margin-bottom: 8vh;
+}
+
+
+/*TITULOS e ver mais*/
+.txt {
+    font-family: Helvetica;
+    font-size: 13pt;
+    color: #6D6C6F;
+    margin-bottom: 0px;
+}
+
+.txtVejaMais {
+    color: #3483fa;
+    font-size: 16px;
+    margin-left: 16px;
+    text-decoration: none;
+    margin-left: 0px;
+    margin-bottom: 0px;
+
+}
+
+/* cards dos produtos*/
+
+
+.areaProduto {
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding-bottom: 15px;
+    width: 100%;
+}
+
+.cardProoduto {
+    background-color: white;
+    height: 405.2px;
+    width: 207.4px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.cardProoduto:hover{
+    box-shadow: 0 7px 11px 0 rgba(0,0,0,.1), 0 2px 4px 0 rgba(0,0,0,.1);
+}
+
+.areaImg {
+    height: 220px;
+    width: 207px;
+    border-bottom: 1px solid #E5E5E5;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.imgCard {
+    width: 100%;
+    height: 100%;
+}
+
+/* informações abaixo da imagem do cards*/
+
+.valorOriginal {
+    text-decoration: line-through 1px;
+    color: #858585;
+    font-family: Helvetica;
+    font-size: 12px;
+    margin-left: 20px;
+    margin-bottom: 3px;
+    margin-top: 2px
+}
+
+.ValorPromo {
+    font-family: Helvetica;
+    font-size: 20px;
+    color: black;
+    margin-left: 20px;
+    margin-top: 1px;
+    margin-bottom: 0px;
+}
+
+sup {
+    font-size: 10px;
+}
+
+.descoVerde {
+    color: #12AC5C;
+    font-size: 13px;
+    font-family: Arial;
+    margin-left: 5px;
+}
+
+.freteGratis {
+    color: #00A650;
+    font-size: 14px;
+    margin-left: 20px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    font-family: Arial;
+}
+
+.imgRaio {
+    width: 15px;
+    height: 12px;
+}
+
+.txtFull {
+    font-style: italic;
+    font: bold;
+    font-size: 13px;
+    font-family: Arial;
+    font-weight: 800;
+}
+
+.inforProduto {
+    color: #615e5e;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 12px;
+    font-family: verdana;
+    margin-top: 0px;
+}
+
+/*BOTAO DA OFERTA DO DIA*/
+
+.btnOferta {
+    background-color: #3A81F6;
+    color: #ffffff;
+    font: bold;
+    font-size: 12px;
+    border-radius: 3px;
+    border: none;
+    padding: 2px 5px;
+    margin-left: 20px;
+    cursor: pointer;
+
+}
+
+
+/*titulo levis*/
+.tituloCentro {
+    text-align: center;
+}
+
+.margemTop {
+    margin-top: 8%;
+}
+
+
+
+/*cadrs das marcas (O MELHOR DA SEMANA DE MODA E BELEZA)*/
+.barraCard {
+    background-color: #FEFCE5;
+    height: fit-content;
+    width: 100%;
+    margin-bottom: 10vh;
+    margin-top: 1%;
+}
+
+.centralizarConteudo{
+    justify-content: center;
+}
+
+.corFundo {
+    background-color: transparent;
+    padding-top: .5%;
+}
+
+
+.cardsMedio {
+    background-color: #ffffff;
+    height: 300px;
+    width: 292.8px;
+    margin-left: .5%;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.cardsMedio:hover{
+    box-shadow: 0 7px 11px 0 rgba(0,0,0,.1), 0 2px 4px 0 rgba(0,0,0,.1);
+}
+
+.imgCardMedio {
+    height: 250px;
+    width: 292.8px;
+}
+
+.imgMedidasCardMedio {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+/* legenda abaixo do card da melhor da semana...*/
+
+.descoMarca {
+    font-size: 17px;
+    margin-left: 90px;
+}
+
+
+
+
+/*beleza e cuidado pessoal*/
+
+.margemEmBaixo {
+    margin-bottom: 5%;
+}
+
+.maisLargo {
+    width: 378px;
+    margin-left: 20px;
+}
+
+.imgCardLargo {
+    width: 378px;
+}
+
+.descoBElezaCuidado {
+    margin-left: 130px;
+}
+
+/* cards redondo categorias*/
+
+.areaCardRedondo {
+    height: fit-content;
+    width: 120px;
+    margin-left: 25px;
+    margin-top: 15px;
+    cursor: pointer;
+
+}
+
+.margemCima {
+    margin-top: 5%;
+}
+
+.imgCardRedondo {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #FFFFFF;
+    border-radius: 100%;
+}
+
+/*texto da categoria*/
+.categoria {
+    font-size: 7pt;
+    margin-bottom: 0px;
+    margin-left: 27px;
+}
+
+.txtCardRedondo {
+    margin-top: 0px;
+    text-align: center;
+}
+
+.mrgCardMenor {
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* cards redondo melhores marcas para vc*/
+
+.txtMelhoresMarcas {
+    text-align: center;
+}
+
+.mrgCardsRedondo {
+    margin-left: 4.8%;
+}
+
+.mrgCardsRedondoPrimeiro {
+    margin-left: .5%;
+}
+
+#mgrTxt {
+    margin-top: 8%;
+}
+
+.mrgBaixo {
+    margin-bottom: 10%;
+}
+
+/*Ofertas em destaque*/
+
+
+.margemBoMenor {
+    height: 350px;
+}
+
+/*Cards redondo tedencias da moda*/
+
+
+.marginLeft {
+    margin-left: 2.3%;
+}
+
+/*3 cards dos descontas das categorais look, calçados e jaquetas */
+
+.txtLookinhos {
+    margin-left: 82px;
+}
+
+/* look internacional */
+.margemBtm {
+    margin-bottom: 10px;
+}
+
+/*botao de todas as ofertas*/
+
+.margemLado {
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todasAsOfertas {
+    border-radius: 15px;
+    width: 280px;
+    height: 50px;
+    font-size: 25px;
+    margin: 6px;
+}
+
+/*dois cards full entrega e look*/
+
+.area {
+    height: fit-content;
+    width: 49.2%;
+    display: flex;
+    cursor: pointer;
+
+}
+
+
+.imgEntregaFull {
+    width: 100%;
+    height: 100%;
+    margin-right: 1%;
+    margin-left: 1%;
+    border-radius: 5px;
+}
+
+
+/* Post Flamengo*/
+
+.areaTxt {
+    margin-top: 5px;
+    margin-left: 5px;
+    text-align: justify;
+    font-family: Helvetica;
+    font-size: 9pt;
+    color: #6D6C6F;
+}
+
+
+
+/*btb de mais informações*/
+
+#btbInfor {
+    background-color: #FFFFFF;
+    margin-bottom: -10px;
+}
+
+#txtFormatacao {
+    font-family: Helvetica;
+    font-size: 12pt;
+    color: #6D6C6F;
+}
+
+
+
+/*Informações*/
+
+.areaInformacoes {
+    background-color: #FFFFFF;
+    display: flex;
+    margin-left: 120px;
+    margin-right: 120px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+
+.localTxt {
+    margin-bottom: 0px;
+    height: fit-content;
+}
+
+.txtInfor {
+    font-family: Helvetica;
+    font-size: 12pt;
+    color: #6D6C6F;
+    margin-left: 20px;
+    background-color: #ffffff;
+    width: fit-content;
+    cursor: pointer;
+
+}
+
+.inforAbaixo {
+    font-size: 10pt;
+    width: fit-content;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.imgAcessibilidade {
+    padding-left: 24px;
+    background-image: url(https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/6.4.1/mercadolibre/accessibility.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    -webkit-background-size: 16px 16px;
+    background-size: 16px;
+}
+
+.margemAbaixo {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+
+.dadosMeli {
+    font-size: 9pt;
+    height: fit-content;
+}
+
+
+.corFundoInfor{
+    background-color: #ffffff;
+}

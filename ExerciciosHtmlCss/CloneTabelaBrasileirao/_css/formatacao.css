@@ -1,0 +1,269 @@
+body {
+    background-color: #171717;
+    margin: 0px;
+
+}
+
+/*Barra de navegação*/
+
+#barradenavegacao {
+    position: fixed;
+    width: 100%;
+
+}
+
+ul {
+    background-color: #10502F;
+    text-align: center;
+    margin: 0px;
+    width: 100%;
+    height: 104px;
+
+}
+
+
+li {
+    display: inline-block;
+    padding: 12px 21px 10px 15px;
+    margin-right: 20px;
+    margin-left: 10px;
+    margin-top: 62px;
+}
+
+
+li#selecionado {
+    border-bottom: 2px solid #ffffff;
+}
+
+#selecionado a {
+    color: #ffffff;
+}
+
+a {
+    color: #B1B2B1;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+li:hover {
+    background-color: #286244;
+    transition: background-color;
+}
+
+
+/*formatação ambas tabelas*/
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    border-bottom: 1px solid #B1B2B1;
+
+}
+
+tr {
+    font-family: Arial, sans-serif;
+    color: #ededed;
+    font-size: 12px;
+}
+
+tr:hover {
+    background-color: #303134;
+    transition: background-color;
+}
+
+td {
+    border-bottom: 1px solid #3C4043;
+}
+
+.semBordaTabela {
+    border-bottom: none;
+}
+
+
+/*tabela com titulos*/
+
+caption {
+    background-color: #303134;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #B1B2B1;
+    text-align: left;
+    width: 781px;
+    margin-top: 15vh;
+    height: 57px;
+}
+
+#ano {
+    font-family: Arial, sans-serif;
+    color: #4487F6;
+    text-align: left;
+    padding-left: 15px;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+}
+
+option {
+    background-color: #202124;
+    border: none;
+    color: white;
+}
+
+thead {
+    background-color: #202124;
+}
+
+tr#cabecalho {
+    color: #BDC1C6;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+
+.ultimaColuna {
+    padding-left: 13px;
+    padding-right: 20px;
+}
+
+
+
+.primeiraColuna {
+    padding: 12px 180px 12px 15px;
+}
+
+
+
+
+/*tabela dos dados e times*/
+
+tbody {
+    background-color: #202124;
+}
+
+.simbolo img {
+    height: 20px;
+}
+
+.ultimaIgm {
+    padding-right: 20px;
+}
+
+.imgCirculo {
+    padding-left: 15px;
+}
+
+.valores {
+    padding-right: 20px;
+    text-align: center;
+}
+
+.nomeTime {
+    padding-right: 246px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+/*borda lateral*/
+.time1 {
+    border-left: 3px solid #4285F4;
+    padding-left: 15px;
+}
+
+.time2 {
+    border-left: 3px solid #FA7B17;
+    padding-left: 15px;
+}
+
+.time3 {
+    border-left: 3px solid #34A853;
+    padding-left: 15px;
+}
+
+
+.time4 {
+    border-left: 3px solid #202124;
+    padding-left: 15px;
+}
+
+.time5 {
+    border-left: 3px solid #EA4335;
+    padding-left: 15px;
+}
+
+
+/*Legenda Abaixo da tabela*/
+#areaLegenda {
+    background-color: #202124;
+}
+
+#legenda {
+    background-color: #424548;
+    display: inline-flex;
+    border-radius: 5px;
+    margin: 28px 13px;
+    width: 97%;
+}
+
+.txtTitulo {
+    color: #BDC1C6;
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 0px;
+}
+
+p {
+    color: #BDC1C6;
+    font-size: 11px;
+    text-align: left;
+    margin-left: 15px;
+}
+
+
+/*parte da qualificação e rebaixamento*/
+
+#legendaQualificacao {
+    margin-left: 10px;
+    width: 350px;
+}
+
+#checkAzul {
+    background-color: #4285F4;
+    float: left;
+    height: 7px;
+    width: 7px;
+}
+
+#checkLaranja {
+    background-color: #FA7B17;
+    float: left;
+    height: 7px;
+    width: 7px;
+}
+
+#checkVerde {
+    background-color: #34A853;
+    float: left;
+    height: 7px;
+    width: 7px;
+}
+
+#checkVermelho {
+    background-color: #EA4335;
+    float: left;
+    height: 7px;
+    width: 7px;
+}
+
+/*parte das últimas 5 partidas*/
+
+#ultimasPartidas {
+    width: 350px;
+}
+
+.imgBolinha {
+    float: left;
+    width: 13px;
+    margin-right: 8px;
+}
