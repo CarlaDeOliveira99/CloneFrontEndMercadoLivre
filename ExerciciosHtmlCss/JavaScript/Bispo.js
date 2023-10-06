@@ -1,3 +1,0 @@
-class Bispo extends Peca {
-    
-}

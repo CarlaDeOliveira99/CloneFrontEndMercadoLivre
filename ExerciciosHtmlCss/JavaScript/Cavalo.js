@@ -1,3 +1,0 @@
-class Cavalo extends Peca {
-    
-}
