@@ -1,6 +1,6 @@
 #tabuleiro {
     width: 713px;
-    height:713px;
+    height: 713px;
     border: #000000 solid 2px;
     border-radius: 5px;
     margin: auto;
@@ -14,8 +14,9 @@
     cursor: pointer;
     margin: .5px;
     width: 88px;
-    height: 88px; 
+    height: 88px;
 }
+
 .casaEscura {
     float: left;
     font-size: 65px;
@@ -24,7 +25,7 @@
     cursor: pointer;
     margin: .5px;
     width: 88px;
-    height: 88px; 
+    height: 88px;
 
 }
 

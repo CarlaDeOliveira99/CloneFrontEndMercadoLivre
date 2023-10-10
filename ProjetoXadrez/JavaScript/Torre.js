@@ -1,8 +1,8 @@
 class Torre extends Peca {
-lightcoral
+
 
     mostrarCaminho(div) {
-        div.setAttribute('caminho','selecionado')
+        div.setAttribute('caminho','peca')
         let [linha, coluna] = div.getAttribute('id').split('')
         linha = parseInt(linha)
         coluna = parseInt(coluna)
@@ -79,12 +79,5 @@ lightcoral
             elementoValidar.style.backgroundColor = 'DarkSeaGreen'
             elementoValidar.setAttribute('caminho','selecionado')
         }
-    }
-
-    posicionar(diPosicaoAtual,divPosicaoAnterior,caminho){
-       let torre =  document.getElementById(divPosicaoAnterior.id).textContent
-       document.getElementById(diPosicaoAtual.id).textContent = torre
-       document.getElementById(divPosicaoAnterior.id).textContent = ""
- 
     }
 }
