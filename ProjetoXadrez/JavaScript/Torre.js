@@ -3,6 +3,7 @@ class Torre extends Peca {
 
     mostrarCaminho(div) {
         div.setAttribute('caminho','peca')
+        div.style.backgroundColor = "MediumAquamarine"
         let [linha, coluna] = div.getAttribute('id').split('')
         linha = parseInt(linha)
         coluna = parseInt(coluna)
@@ -17,13 +18,13 @@ class Torre extends Peca {
                     break;
                 } else {
                     elementoValidar.style.backgroundColor = 'lightcoral'
-                    elementoValidar.setAttribute('caminho','selecionado')
+                    elementoValidar.setAttribute('caminho','inimigo')
                     break
                 }
             }
 
             elementoValidar.style.backgroundColor = 'DarkSeaGreen'
-            elementoValidar.setAttribute('caminho','selecionado')
+            elementoValidar.setAttribute('caminho','inimigo')
 
         }
 
@@ -36,7 +37,7 @@ class Torre extends Peca {
                     break;
                 } else {
                     elementoValidar.style.backgroundColor = 'lightcoral'
-                    elementoValidar.setAttribute('caminho','selecionado')
+                    elementoValidar.setAttribute('caminho','inimigo')
                     break
                 }
             }
@@ -54,7 +55,7 @@ class Torre extends Peca {
                     break;
                 } else {
                     elementoValidar.style.backgroundColor = 'lightcoral'
-                    elementoValidar.setAttribute('caminho','selecionado')
+                    elementoValidar.setAttribute('caminho','inimigo')
                     break
                 }
             }
@@ -71,7 +72,7 @@ class Torre extends Peca {
                     break;
                 } else {
                     elementoValidar.style.backgroundColor = 'lightcoral'
-                    elementoValidar.setAttribute('caminho','selecionado')
+                    elementoValidar.setAttribute('caminho','inimigo')
                     break
                 }
             }

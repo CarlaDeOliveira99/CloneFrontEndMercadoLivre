@@ -2,6 +2,7 @@ class Cavalo extends Peca {
 
     mostrarCaminho(div) {
         div.setAttribute('caminho', 'peca')
+        div.style.backgroundColor = "MediumAquamarine"
         let [linha, coluna] = div.getAttribute('id').split('')
         linha = parseInt(linha)
         coluna = parseInt(coluna)
@@ -20,7 +21,7 @@ class Cavalo extends Peca {
                     if (peca) {
                         if (peca.cor != this.cor) {
                             elementoValidar.style.backgroundColor = 'lightcoral'
-                            elementoValidar.setAttribute('caminho', 'selecionado')
+                            elementoValidar.setAttribute('caminho', 'inimigo')
                         }
                     } else {
                         elementoValidar.style.backgroundColor = 'DarkSeaGreen'
@@ -41,7 +42,7 @@ class Cavalo extends Peca {
                     if (peca) {
                         if (peca.cor != this.cor) {
                             elementoValidar.style.backgroundColor = 'lightcoral'
-                            elementoValidar.setAttribute('caminho', 'selecionado')
+                            elementoValidar.setAttribute('caminho', 'inimigo')
                         }
                     } else {
                         elementoValidar.style.backgroundColor = 'DarkSeaGreen'
@@ -62,7 +63,7 @@ class Cavalo extends Peca {
                     if (peca) {
                         if (peca.cor != this.cor) {
                             elementoValidar.style.backgroundColor = 'lightcoral'
-                            elementoValidar.setAttribute('caminho', 'selecionado')
+                            elementoValidar.setAttribute('caminho', 'inimigo')
                         }
                     } else {
                         elementoValidar.style.backgroundColor = 'DarkSeaGreen'
@@ -83,7 +84,7 @@ class Cavalo extends Peca {
                     if (peca) {
                         if (peca.cor != this.cor) {
                             elementoValidar.style.backgroundColor = 'lightcoral'
-                            elementoValidar.setAttribute('caminho', 'selecionado')
+                            elementoValidar.setAttribute('caminho', 'inimigo')
                         }
                     } else {
                         elementoValidar.style.backgroundColor = 'DarkSeaGreen'
