@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&display=swap');
+
+.areaJogador {
+    width: 24%;
+    float: right;
+    margin-right: 1%;
+}
+
+.campo {
+    border-radius: 12px
+}
+
+#areaJogador1 {
+    background-color: rgb(204, 166, 166);
+    display: flex;
+    margin-top: 27%;
+    font-family: 'Gabriela', serif;
+    font-weight: bold;
+    font-size: 15pt;
+    
+}
+
+#areaJogador2{
+    background-color: rgb(203, 203, 171);
+    display: flex;
+    margin-top: 104%;
+    font-family: 'Gabriela', serif;
+    font-weight: bold;
+    font-size: 15pt;
+}
+
+.imgPeca {
+    float: right;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+
+p{
+    margin-right: 7%;
+    text-align: center;
+    width: 79%;
+    font-family: 'Gabriela', serif;
+    font-size: 15pt;
+    margin:auto;
+}

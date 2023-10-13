@@ -7,10 +7,38 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="Css/formatacao.css">
+    <link rel="stylesheet" href="Css/formatacaoTabela.css">
+    <link rel="stylesheet" href="Css/formatacao_modal_xeque_mate.css">
+    <link rel="stylesheet" href="Css/formatacao_area_jogador.css">
 </head>
 
 <body>
+
+    <div class="areaJogador">
+        <div class="campo" id="areaJogador1">
+            <p id="nomeJodador2"></p>
+            <div class="imgPeca"><img src="icone/1.png" alt="Peça Branca"></div>
+        </div>
+        <div class="campo" id="areaJogador2">
+            <p id="nomeJodador2"></p>
+            <div class="imgPeca"><img src="icone/2.png" alt="Peça Preta"></div>
+        </div>
+    </div>
+
+    <div id="modalFundo" class="hide">
+        <div id="modal" class="hide">
+            <p>Escolha qual cor deseja jogar?</p>
+            <div id="areaEscolherPeca">
+                <button id="pecaBranca" class="imgPecaEscolher"><img src="icone/1.png" alt="Peça Branca"></button>
+                <button id="pecaPreta" class="imgPecaEscolher"><img src="icone/2.png" alt="Peça Preta"></button>
+                <div id="campoNome">
+                    <div id="campoImgSelecionada"><img id="imgSelecionada" src="" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div id="tabuleiro">
 
         <!-- Primeira Linha Tabela -->
@@ -93,7 +121,7 @@
         <div id="75" class="casaClara">&#9815</div>
         <div id="76" class="casaEscura">&#9816</div>
         <div id="77" class="casaClara">&#9814</div>
-    </div> 
+    </div>
 
     <script src="JavaScript/paginaInical.js" async defer></script>
     <script src="JavaScript/Peca.js" async defer></script>
@@ -105,6 +133,9 @@
     <script src="JavaScript/Peao.js" async defer></script>
     <script src="JavaScript/FactoryPeca.js" async defer></script>
     <script src="JavaScript/Constantes.js" async defer></script>
+    <script src="JavaScript/modal_xeque_mate.js" async defer></script>
+    <script src="JavaScript/jogador.js" async defer></script>
+
 </body>
 
 </html>
