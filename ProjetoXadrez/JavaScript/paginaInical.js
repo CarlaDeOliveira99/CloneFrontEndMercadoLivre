@@ -128,15 +128,14 @@ window.addEventListener('load', function () {
 
 
     function ganhador(rei_Branco, rei_Preto) {
+        let jogador1 = document.getElementById('nomeJodador1').innerText
+        let jogador2 = document.getElementById('nomeJodador2').innerText
+        modalXeque()
         if (rei_Branco) {
-            console.log('ganhou');
-        } else {
-            console.log('perdeu');
+            document.getElementById('vencedor').innerHTML = `O jogador <span>${jogador1} </span>ganhou a partida!!!`
         }
         if (rei_Preto) {
-            console.log('ganhou');
-        } else {
-            console.log('perdeu');
+            document.getElementById('vencedor').innerHTML = `O jogador <span> ${jogador2}</span> ganhou a partida!!!`
         }
     }
 })

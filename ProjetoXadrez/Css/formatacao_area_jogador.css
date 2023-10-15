@@ -4,6 +4,7 @@
     width: 24%;
     float: right;
     margin-right: 1%;
+    margin-left: 1%;
 }
 
 .campo {
@@ -11,7 +12,7 @@
 }
 
 #areaJogador1 {
-    background-color: rgb(204, 166, 166);
+    background-color: rgb(211, 211, 211);
     display: flex;
     margin-top: 27%;
     font-family: 'Gabriela', serif;
@@ -21,7 +22,7 @@
 }
 
 #areaJogador2{
-    background-color: rgb(203, 203, 171);
+    background-color: rgb(211, 211, 211);
     display: flex;
     margin-top: 104%;
     font-family: 'Gabriela', serif;

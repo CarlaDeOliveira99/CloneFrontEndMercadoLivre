@@ -1,9 +1,14 @@
+body{
+    min-width: 985px;
+}
+
 #tabuleiro {
     width: 713px;
     height: 713px;
     border: #000000 solid 2px;
     border-radius: 5px;
-    margin: auto;
+    margin: auto ;
+    float: right;
 }
 
 .casaClara {

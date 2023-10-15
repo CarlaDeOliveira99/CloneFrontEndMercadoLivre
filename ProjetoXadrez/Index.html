@@ -8,15 +8,16 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="Css/formatacaoTabela.css">
-    <link rel="stylesheet" href="Css/formatacao_modal_xeque_mate.css">
+    <link rel="stylesheet" href="Css/formatacao_modal_jogador.css">
     <link rel="stylesheet" href="Css/formatacao_area_jogador.css">
+    <link rel="stylesheet" href="Css/formatacao_xeque_mate.css">
 </head>
 
 <body>
 
     <div class="areaJogador">
         <div class="campo" id="areaJogador1">
-            <p id="nomeJodador2"></p>
+            <p id="nomeJodador1"></p>
             <div class="imgPeca"><img src="icone/1.png" alt="Peça Branca"></div>
         </div>
         <div class="campo" id="areaJogador2">
@@ -25,18 +26,25 @@
         </div>
     </div>
 
-    <div id="modalFundo" class="hide">
-        <div id="modal" class="hide">
-            <p>Escolha qual cor deseja jogar?</p>
-            <div id="areaEscolherPeca">
-                <button id="pecaBranca" class="imgPecaEscolher"><img src="icone/1.png" alt="Peça Branca"></button>
-                <button id="pecaPreta" class="imgPecaEscolher"><img src="icone/2.png" alt="Peça Preta"></button>
-                <div id="campoNome">
-                    <div id="campoImgSelecionada"><img id="imgSelecionada" src="" alt=""></div>
-                </div>
+    <div id="modalFundo" class="hide"></div>
+    <div id="modal" class="hide">
+        <p id="tituloJogador">Escolha qual cor deseja jogar?</p>
+        <div id="areaEscolherPeca">
+            <button id="pecaBranca" class="imgPecaEscolher"><img src="icone/1.png" alt="Peça Branca"></button>
+            <button id="pecaPreta" class="imgPecaEscolher"><img src="icone/2.png" alt="Peça Preta"></button>
+            <div id="campoNome">
+                <div id="campoImgSelecionada"><img id="imgSelecionada" src="" alt=""></div>
             </div>
         </div>
     </div>
+
+
+    <div id="modalFundoXeque" class="hide"></div>
+    <div id="modalXeque" class="hide">
+        <div id="vencedor"></div>
+        <div ><button id="btnReniciar" class="btnModal" type="button">Reniciar Partida</button></div>
+    </div>
+
 
 
     <div id="tabuleiro">
@@ -133,8 +141,9 @@
     <script src="JavaScript/Peao.js" async defer></script>
     <script src="JavaScript/FactoryPeca.js" async defer></script>
     <script src="JavaScript/Constantes.js" async defer></script>
-    <script src="JavaScript/modal_xeque_mate.js" async defer></script>
+    <script src="JavaScript/modal_jogador.js" async defer></script>
     <script src="JavaScript/jogador.js" async defer></script>
+    <script src="JavaScript/modal_xeque_mate.js" async defer></script>
 
 </body>
 

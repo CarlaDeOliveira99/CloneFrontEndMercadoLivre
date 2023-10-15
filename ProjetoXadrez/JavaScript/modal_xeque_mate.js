@@ -1,19 +1,14 @@
-const modal = document.getElementById('modal')
-const fundoModal = document.getElementById('modalFundo')
-
-window.addEventListener('load', function carregar() {
-   
-    toggleModal()
-
-})
+const modalRei = document.getElementById('modalXeque')
+const fundoModalRei = document.getElementById('modalFundoXeque')
+const reniciarPartida = document.getElementById('btnReniciar')
 
 
-const toggleModal = () => {
-    modal.classList.toggle("hide");
-    fundoModal.classList.toggle("hide");
+const modalXeque = () => {
+    modalRei.classList.toggle("hide");
+    fundoModalRei.classList.toggle("hide");
 };
 
 
-//   [fundoModal].forEach((el) => {
-//         el.addEventListener("click", () => toggleModal());
-//     });
+reniciarPartida.addEventListener('click', function reniciarPartida() {
+    window.location.reload()
+})
