@@ -14,7 +14,7 @@
 #areaJogador1 {
     background-color: rgb(211, 211, 211);
     display: flex;
-    margin-top: 27%;
+    margin-top: 102%;
     font-family: 'Gabriela', serif;
     font-weight: bold;
     font-size: 15pt;
@@ -24,7 +24,7 @@
 #areaJogador2{
     background-color: rgb(211, 211, 211);
     display: flex;
-    margin-top: 104%;
+    margin-top: 27%;
     font-family: 'Gabriela', serif;
     font-weight: bold;
     font-size: 15pt;
