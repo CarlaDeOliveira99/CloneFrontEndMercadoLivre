@@ -17,7 +17,7 @@ Este projeto tem como objetivo de recriar o site do Mercado Livre utilizando HTM
 <img src="ExerciciosHtmlCss/CloneSiteMercadoLivre/_imagens/Mercado Livre - Homepage1.jpg " align="left"  width="300">
 <img src="ExerciciosHtmlCss/CloneSiteMercadoLivre/_imagens/Mercado Livre - Homepage4.jpg " align="left"  width="300">
 <img src="ExerciciosHtmlCss/CloneSiteMercadoLivre/_imagens/Mercado Livre - Homepage8.jpg " align="left"  width="300">
-<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
 
 
 ## Jogo de Xadrez ♟️
