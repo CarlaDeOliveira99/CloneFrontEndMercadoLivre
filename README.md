@@ -23,6 +23,7 @@ Este projeto tem como objetivo de recriar o site do Mercado Livre utilizando HTM
 ## Jogo de Xadrez ♟️
 O projeto tem como finalidade praticar e aperfeiçoar a linguagem JavaScript, foi utilizado também CSS e HTML. Segue abaixo o link do projeto e as imagens da tela do jogo.
 * [Acesso ao projeto jogo de xadrez](ProjetoXadrez)
+ <br><br>
   <img src="ProjetoXadrez/imagens da tela do jogo/tela inicial.png " align="left"  width="300">
   <img src="ProjetoXadrez/imagens da tela do jogo/durante a partida.png" align="left"  width="300">
   <img src="ProjetoXadrez/imagens da tela do jogo/final da partida.png" align="left"  width="300">
