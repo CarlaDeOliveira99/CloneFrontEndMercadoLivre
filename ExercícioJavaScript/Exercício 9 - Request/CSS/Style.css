@@ -57,7 +57,7 @@ body {
     transform: scale(1.05);
 }
 
-span{
+span {
     font-family: FonteRubik;
     font-size: 14.05pt;
     font-weight: 600;
@@ -125,7 +125,9 @@ span{
     font-family: FonteRubik;
     font-size: 14pt;
     color: rgb(0, 0, 0);
-    margin: 7px 1px;
+    margin-left: 1px;
+    margin-top: 5px;
+    margin-bottom: 1px;
 }
 
 
@@ -133,7 +135,9 @@ span{
     font-family: FonteRubik;
     font-size: 13pt;
     color: #4a5051;
-    margin: 7px 1px;
+    margin-left: 1px;
+    margin-top: 5px;
+    margin-bottom: 1px;
 
 }
 
