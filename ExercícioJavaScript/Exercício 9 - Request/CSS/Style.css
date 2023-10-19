@@ -1,0 +1,142 @@
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+@font-face {
+    font-family: FonteGoole;
+    src: url(fontes/Creepster/Creepster-Regular.ttf);
+}
+
+
+@font-face {
+    font-family: FonteRubik;
+    src: url(fontes/Rubik/Rubik-VariableFont_wght.ttf);
+}
+
+
+#cabecalho {
+    display: grid;
+    justify-items: center;
+}
+
+
+#titulo {
+    margin-bottom: 12px;
+    font-family: FonteGoole;
+    color: white;
+    font-size: 68pt;
+    text-align: center;
+    margin-top: 0px;
+}
+
+#areaProximaPag {
+    border-radius: 4px;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.paginas {
+    display: flex;
+    border: 1px solid rgb(31, 29, 29);
+    border-radius: 5px;
+    background-color: rgb(31, 29, 29);
+    color: #ffffff;
+    margin-right: 23px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.paginas:hover {
+    opacity: .8;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+span{
+    font-family: FonteRubik;
+    font-size: 14.05pt;
+    font-weight: 600;
+}
+
+.imgProximo {
+    height: 32px;
+    width: 32px;
+    margin-left: 9px;
+}
+
+/* cards */
+
+#areaCards {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1920px;
+    justify-content: center;
+}
+
+.cards {
+    width: 427px;
+    height: 224px;
+    background-color: #ffffff;
+    border: 2px solid rgb(184, 184, 184);
+    margin: 29px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    border-radius: 16px;
+}
+
+
+
+.imgAvatar {
+    width: 171px;
+    height: 222px;
+    border-radius: 13px 0px 0px 13px;
+    margin-top: 0.5px;
+    margin-left: 0.5px;
+}
+
+.dados {
+    width: 246px;
+    margin-left: 6px;
+    height: 203px;
+    margin-top: 6.5px;
+}
+
+
+.nome {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18pt;
+    color: rgb(0, 0, 0);
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.especie, .status, .local, .episodio {
+    font-family: FonteRubik;
+    font-size: 14pt;
+    color: rgb(0, 0, 0);
+    margin: 7px 1px;
+}
+
+
+.ultimoLocalTxt, .vistoTxt {
+    font-family: FonteRubik;
+    font-size: 13pt;
+    color: #4a5051;
+    margin: 7px 1px;
+
+}
+
+.generoTxt {
+    display: flex;
+}
