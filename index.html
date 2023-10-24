@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Mercado livre Brasil - Frete Grátis no mesmo dia</title>
+    <meta name="description" content>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formatacao.css">
+    <link rel="icon" href="imagens/guiaDoSite.svg" type="image/x-icon"><!--icone na guia do site-->
+</head>
+
+<body>
+
+    <div class="areaInterna">
+
+        <!-- Barra de navegação -->
+        <div class="barraDeNavegacao">
+            <div class="card">
+                <div class="areaBarra">
+                    <div class="mrg">
+                        <a href="index.html"><img src="imagens/logotipoMercadoLivre.png"></a>
+                    </div>
+                    <div class="areabarraDePesquisa mrg">
+                        <input type="text" name="barraDePesquisa" id="barraDePesquisa"
+                            placeholder="Buscar produtos, marcas e muito mais..." maxlength="120">
+                        <button id="btnLupa"><img id="imgLupa" src="imagens/lupaArredondada.png"></button>
+                    </div>
+                    <div class="areaDisney">
+                        <div class="disneyMedidas mrg">
+                            <img id="imgDisney" src="imagens/disneyPlus.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="areaBarra mrgTop">
+                    <div class="areaLocalizacao">
+                        <img src="imagens/iconeLocalizacao.png">
+                        <span class="barraTxt">Digite seu endereço</span>
+                    </div>
+                    <div class="areaMenu">
+                        <p class="txtMenu">Categorias</p>
+                        <p class="txtMenu">Oferta do dia</p>
+                        <p class="txtMenu">Histórico</p>
+                        <p class="txtMenu">Moda</p>
+                        <p class="txtMenu">Vender</p>
+                        <p class="txtMenu">Contato</p>
+                    </div>
+                    <div class="areaCompra">
+                        <div class="blocoArea">
+                            <p class="txtCompra">Crie a sua conta</p>
+                        </div>
+
+                        <div class="blocoArea">
+                            <p class="txtCompra">Entre</p>
+                        </div>
+
+                        <div class="blocoArea">
+                            <p class="txtCompra">Compras</p>
+                        </div>
+                        <div class="blocoArea">
+                            <img src="imagens/iconeCarrinhoDeCompras.png" id="imgCarrinhoCompra">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Post grande (monte seu look)-->
+        <div id="postGrande">
+            <img id="imgPostGrande" src="imagens/carrosselMonteSeuLook.jpg">
+        </div>
+
+        <!-- Posto médio (primavera) -->
+        <div class="card postMedio">
+            <img class="imgPostPadrao" src="imagens/primaveraVerao.jpg">
+        </div>
+
+        <!-- card padrao (ofertas em destaque) -->
+        <div class="card">
+            <div class="txt">
+                <p>OFERTAS EM DESTAQUE 🔥 <a class="txtVejaMais"
+                        href="https://lista.mercadolivre.com.br/roupa#D[A:roupa%20]" target="_blank">Ver mais</a>
+                </p>
+            </div>
+            <div class="areaProduto">
+                <div class="cardProoduto">
+                    <div class="areaImg"><img class="imgCard" src="imagens/cardGel1.jpg"></div>
+                    <p class="valorOriginal">R$ 199</p>
+                    <p class="ValorPromo">R$ 159<sup>90</sup><span class="descoVerde">20% OFF</span></p>
+                    <p class="freteGratis">Frete grátis <img class="imgRaio" src="imagens/iconeRaio.png"><span
+                            class="txtFull">FULL</span></p>
+                    <p class="inforProduto">
+                        Gel/Serum Fortalecedor Facial Diario com
+                        Acido...</p>
+                </div>
+                <div class="cardProoduto">
+                    <div class="areaImg"><img class="imgCard" src="imagens/cardRoupaFeminina2.jpg"></div>
+                    <button class="btnOferta">OFERTA DO DIA</button>
+                    <p class="valorOriginal">R$ 299</p>
+                    <p class="ValorPromo">R$ 199<sup>90</sup><span class="descoVerde">23% OFF <br>6x R$
+                            33<sup>32</sup>
+                            sem
+                            juros</span></p>
+                    <p class="freteGratis">Frete grátis <img class="imgRaio" src="imagens/iconeRaio.png"><span
+                            class="txtFull">FULL</span></p>
+                    <p class="inforProduto">
+                        Jaqueta Puffer De Matelassê Feminina Com Forro
+                        Hering...</p>
+                </div>
+                <div class="cardProoduto">
+                    <div class="areaImg"><img class="imgCard" src="imagens/cardLancome3.jpg "></div>
+                    <p class="valorOriginal">R$ 829</p>
+                    <p class="ValorPromo">R$ 538<sup>54</sup><span class="descoVerde">33% OFF</span></p>
+                    <p class="freteGratis">Frete grátis <img class="imgRaio" src="imagens/iconeRaio.png"><span
+                            class="txtFull">FULL</span></p>
+                    <p class="inforProduto">
+                        Lancôme La Vie est Belle EDP 100ml Feminino...</p>
+                </div>
+                <div class="cardProoduto">
+                    <div class="areaImg"><img class="imgCard" src="imagens/cardBotaBranca4.jpg"></div>
+                    <p class="valorOriginal">R$ 269</p>
+                    <p class="ValorPromo">R$ 187<sup>99</sup><span class="descoVerde">30% OFF</span></p>
+                    <p class="freteGratis">Frete grátis <img class="imgRaio" src="imagens/iconeRaio.png"><span
+                            class="txtFull">FULL</span></p>
+                    <p class="inforProduto">
+                        Bota Coturno Tratorada Cano Médio Feminina...</p>
+                </div>
+                <div class="cardProoduto">
+                    <div class="areaImg"><img class="imgCard" src="imagens/cardGiorgio5.jpg"></div>
+                    <p class="valorOriginal">R$ 849</p>
+                    <p class="ValorPromo">R$ 483<sup>54</sup><span class="descoVerde">43% OFF</span></p>
+                    <p class="freteGratis">Frete grátis <img class="imgRaio" src="imagens/iconeRaio.png"><span
+                            class="txtFull">FULL</span></p>
+                    <p class="inforProduto">
+                        Giorgio Armani Acqua di Giò EDT 200ml para
+                        masculino</p>
+                </div>
+                <div class="cardProoduto">
+                    <div class="areaImg"><img class="imgCard" src="imagens/cardMoletom 7.jpg"></div>
+                    <p class="valorOriginal">R$ 279</p>
+                    <p class="ValorPromo">R$ 245<sup>52</sup><span class="descoVerde">12% OFF<br>8x R$
+                            30<sup>69</sup>
+                            sem
+                            juros</span></p>
+                    <p class="freteGratis">Frete grátis <img class="imgRaio" src="imagens/iconeRaio.png"><span
+                            class="txtFull">FULL</span></p>
+                    <p class="inforProduto">
+                        Blusa Moletom Sunday Deep Green Suntime</p>
+                </div>
+                <div class="cardProoduto">
+                    <div class="areaImg"><img class="imgCard" src="imagens/cardSilver8.jpg"></div>
+                    <p class="valorOriginal">R$ 389</p>
+                    <p class="ValorPromo">R$ 210<sup>54</sup><span class="descoVerde">45% OFF</span></p>
+                    <p class="freteGratis">Frete grátis <img class="imgRaio" src="imagens/iconeRaio.png"><span
+                            class="txtFull">FULL</span></p>
+                    <p class="inforProduto">
+                        Silver Scent Midnight 100ml | Original + Amostra
+                        De Brinde</p>
+                </div>
+                <div class="cardProoduto">
+                    <div class="areaImg"><img class="imgCard" src="imagens/jaquetaBranca.jpg"></div>
+                    <p class="valorOriginal">R$ 340</p>
+                    <p class="ValorPromo">R$ 224<sup>99</sup><span class="descoVerde">34% OFF<br>7x R$
+                            32<sup>14</sup>
+                            sem
+                            juros</span></p>
+                    <p class="freteGratis">Frete grátis <img class="imgRaio" src="imagens/iconeRaio.png"><span
+                            class="txtFull">FULL</span></p>
+                    <p class="inforProduto">
+                        Jaqueta Puffer Feminina Com Capuz Endless Bege</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Post médio( Levis) -->
+        <div class="card  margemTop">
+            <div class="txt">
+                <p class="tituloCentro">LEVIS'S COM ATÉ 50% OFF</p>
+            </div>
+
+            <img class="imgPostPadrao" src="imagens/levis.jpg">
+        </div>
+
+        <!-- Card médio (O MELHOR DA SEMANA DE MODA E BELEZA) -->
+        <div class="barraCard">
+            <div class="card corFundo">
+                <div class="txt corFundo">
+                    <p class="tituloCentro">O MELHOR DA SEMANA DE MODA E
+                        BELEZA</p>
+                </div>
+                <div class="areaProduto centralizarConteudo">
+                    <div class="cardsMedio">
+                        <div class="imgCardMedio">
+                            <img class="imgMedidasCardMedio" src="imagens/boticario.jpg">
+                            <span class="inforProduto descoMarca">ATÉ
+                                30% OFF</span>
+                        </div>
+                    </div>
+                    <div class="cardsMedio">
+                        <div class="imgCardMedio">
+                            <img class="imgMedidasCardMedio" src="imagens/natura.jpg">
+                            <span class="inforProduto descoMarca">ATÉ
+                                30% OFF</span>
+                        </div>
+                    </div>
+                    <div class="cardsMedio">
+                        <div class="imgCardMedio">
+                            <img class="imgMedidasCardMedio" src="imagens/loungerie.jpg">
+                            <span class="inforProduto descoMarca">ATÉ
+                                60% OFF</span>
+                        </div>
+                    </div>
+                    <div class="cardsMedio">
+                        <div class="imgCardMedio">
+                            <img class="imgMedidasCardMedio" src="imagens/hering.jpg">
+                            <span class="inforProduto descoMarca">ATÉ
+                                70% OFF</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Card médio (BELEZA E CUIDADO PESSOAL) -->
+        <div class="card margemEmBaixo">
+            <div class="txt">
+                <p class="tituloCentro melhorDaSemana">BELEZA E CUIDADO
+                    PESSOAL &#128155;</p>
+            </div>
+            <div class="areaProduto centralizarConteudo">
+                <div class="cardsMedio maisLargo">
+                    <div class="imgCardMedio">
+                        <img class="imgMedidasCardMedio imgCardLargo" src="imagens/novidades.jpg">
+                        <span class="inforProduto descoMarca descoBElezaCuidado">ATÉ
+                            50% OFF</span>
+                    </div>
+                </div>
+                <div class="cardsMedio maisLargo">
+                    <div class="imgCardMedio">
+                        <img class="imgMedidasCardMedio imgCardLargo" src="imagens/maquiagem.jpg">
+                        <span class="inforProduto descoMarca descoBElezaCuidado">ATÉ
+                            40% OFF</span>
+                    </div>
+                </div>
+                <div class="cardsMedio maisLargo">
+                    <div class="imgCardMedio">
+                        <img class="imgMedidasCardMedio imgCardLargo" src="imagens/melhoresFragrancias.jpg">
+                        <span class="inforProduto descoMarca descoBElezaCuidado">ATÉ
+                            50% OFF</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- card redondo centralizado com txt embaixo -->
+        <div class="card">
+            <div class="areaProduto mrgCardMenor">
+                <div class="areaCardRedondo">
+                    <img class="imgCardRedondo" src="imagens/perfumeMasculino.jpg">
+                    <span class="inforProduto categoria">PERFUMES <p class="txtCardRedondo">MASCULINOS</p></span>
+                </div>
+                <div class="areaCardRedondo">
+                    <img class="imgCardRedondo" src="imagens/perfumeFemininos.jpg">
+                    <span class="inforProduto categoria">PERFUMES <p class="txtCardRedondo">FEMININOS</p></span>
+                </div>
+                <div class="areaCardRedondo">
+                    <img class="imgCardRedondo" src="imagens/kits.jpg">
+                    <span class="inforProduto categoria">KITS </span>
+                </div>
+                <div class="areaCardRedondo">
+                    <img class="imgCardRedondo" src="imagens/grandesMarcas.jpg">
+                    <span class="inforProduto categoria">GRANDES <p class="txtCardRedondo">MARCAS</p></span>
+                </div>
+                <div class="areaCardRedondo">
+                    <img class="imgCardRedondo" src="imagens/produtosComMimos.jpg">
+                    <span class="inforProduto categoria">PRODUTOS<p class="txtCardRedondo"> COM MIMOS</p></span>
+                </div>
+                <div class="areaCardRedondo">
+                    <img class="imgCardRedondo" src="imagens/perfumesImportados.jpg">
+                    <span class="inforProduto categoria">PERFUMES<p class="txtCardRedondo">IMPORTADOS</p></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- card redondo mais espaço entre os elementos (melhores da semana) -->
+        <div class="card  mrgBaixo">
+            <div class="txt txtMelhoresMarcas">
+                <p id="mgrTxt">MELHORES MARCAS PARA VOCÊ COMPRAR</p>
+            </div>
+            <div class="areaProduto centralizarConteudo">
+                <div class="areaCardRedondo mrgCardsRedondoPrimeiro">
+                    <img class="imgCardRedondo" src="imagens/logotipoBoticario1.jpg">
+                </div>
+                <div class="areaCardRedondo mrgCardsRedondo">
+                    <img class="imgCardRedondo" src="imagens/logotipoMac2.jpg">
+                </div>
+                <div class="areaCardRedondo mrgCardsRedondo">
+                    <img class="imgCardRedondo" src="imagens/logotipoNatura.jpg">
+                </div>
+                <div class="areaCardRedondo mrgCardsRedondo">
+                    <img class="imgCardRedondo" src="imagens/logotipoLarocheposay4.jpg">
+                </div>
+                <div class="areaCardRedondo mrgCardsRedondo">
+                    <img class="imgCardRedondo" src="imagens/logotipoLoreal6.jpg">
+                </div>
+                <div class="areaCardRedondo mrgCardsRedondo">
+                    <img class="imgCardRedondo" src="imagens/logotipoAntonioBanderas7.jpg">
+                </div>
+                <div class="areaCardRedondo mrgCardsRedondo">
+                    <img class="imgCardRedondo" src="imagens/logotipoVichy8.jpg">
+                </div>
+            </div>
+        </div>
+
+        <!-- cars padrão (ofertas em destaque) -->
+        <div class="card mrgBaixo">
+            <div class="txt">
+                <p>OFERTAS EM DESTAQUE&#x26A1;&#x26A1;&#x26A1; <a class="txtVejaMais"
+                        href="https://lista.mercadolivre.com.br/roupa#D[A:roupa%20]" target="_blank">Ver mais</a>
+                </p>
+            </div>
+            <div class="areaProduto">
+                <div class="cardProoduto margemBoMenor">
+                    <div class="areaImg"><img class="imgCard" src="imagens/cardMoletomMasculino.jpg"></div>
+                    <p class="valorOriginal">R$ 351</p>
+                    <p class="ValorPromo">R$ 87<sup>99</sup><span class="descoVerde">74% OFF</span></p>
+                    <p class="freteGratis">Frete grátis <img class="imgRaio" src="imagens/iconeRaio.png"><span
+                            class="txtFull">FULL</span></p>
+                    <p class="inforProduto">
+                        Blusa Moletom Masculino Azul Tamanho G
+                        Jack&jones...</p>
+                </div>
+                <div class="cardProoduto margemBoMenor">
+                    <div class="areaImg"><img class="imgCard" src="imagens/cardJaquetaAmarela.jpg"></div>
+                    <p class="valorOriginal">R$ 299</p>
+                    <p class="ValorPromo">R$ 71<sup>99</sup><span class="descoVerde">75% OFF</span></p>
+                    <p class="freteGratis"><img class="imgRaio" src="imagens/iconeRaio.png"><span
+                            class="txtFull">FULL</span></p>
+                    <p class="inforProduto">
+                        Jaqueta Outwear Feminina Amarela P Vero Moda
+                        Oferta</p>
+                </div>
+                <div class="cardProoduto margemBoMenor">
+                    <div class="areaImg"><img class="imgCard" src="imagens/cardLancome3.jpg"></div>
+                    <p class="ValorPromo">R$ 570<sup>88</sup><span class="descoVerde"><br>10x R$ 57<sup>09</sup>
+                            sem
+                            juros</span></p>
+                    <p class="freteGratis">Frete grátis <img class="imgRaio" src="imagens/iconeRaio.png"><span
+                            class="txtFull">FULL</span></p>
+                    <p class="inforProduto">
+                        Lancôme La Vie est Belle EDP 100ml Feminino...</p>
+                </div>
+                <div class="cardProoduto margemBoMenor">
+                    <div class="areaImg"><img class="imgCard" src="imagens/cardGiorgio5.jpg"></div>
+                    <p class="valorOriginal">R$ 849</p>
+                    <p class="ValorPromo">R$ 483<sup>54</sup><span class="descoVerde">43% OFF</span></p>
+                    <p class="freteGratis">Frete grátis <img class="imgRaio" src="imagens/iconeRaio.png"><span
+                            class="txtFull">FULL</span></p>
+                    <p class="inforProduto">
+                        Giorgio Armani Acqua di Giò EDT 200ml para
+                        masculino</p>
+                </div>
+                <div class="cardProoduto   margemBoMenor">
+                    <div class="areaImg"><img class="imgCard" src="imagens/cardBotaFeminina.jpg"></div>
+                    <p class="valorOriginal">R$ 139</p>
+                    <p class="ValorPromo">R$ 125<sup>99</sup><span class="descoVerde">10% OFF</span></p>
+                    <p class="freteGratis">Frete grátis <img class="imgRaio" src="imagens/iconeRaio.png"><span
+                            class="txtFull">FULL</span></p>
+                    <p class="inforProduto">
+                        Bota Feminina Texana Bico Fino Cano Curto
+                        Confortav...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- card redondo ( tedencias que estão na moda) -->
+        <div class="card mrgBaixo">
+            <div class="txt txtMelhoresMarcas">
+                <p>TENDÊNCIAS QUE ESTÃO NA MODA</p>
+            </div>
+            <div class="areaProduto centralizarConteudo">
+                <div class="areaCardRedondo marginLeft">
+                    <img class="imgCardRedondo" src="imagens/iconeNovidades.jpg">
+                    <span class="inforProduto txtCardRedondo">NOVIDADES</span>
+                </div>
+                <div class="areaCardRedondo marginLeft">
+                    <img class="imgCardRedondo" src="imagens/iconePreview.jpg">
+                    <s<span class="inforProduto categoria">PREVIEW <p class="txtCardRedondo">PRIMAVERA/VERÃO</p>
+                        </span>
+                </div>
+                <div class="areaCardRedondo marginLeft">
+                    <img class="imgCardRedondo" src="imagens/iconeBotas.jpg">
+                    <s<span class="inforProduto categoria">BOTAS E <p class="txtCardRedondo">COTURNOS</p></span>
+                </div>
+                <div class="areaCardRedondo marginLeft">
+                    <img class="imgCardRedondo" src="imagens/iconePink.jpg">
+                    <s<span class="inforProduto categoria">PINK</span>
+                </div>
+                <div class="areaCardRedondo marginLeft">
+                    <img class="imgCardRedondo" src="imagens/iconeBrilhos.jpg">
+                    <s<span class="inforProduto categoria">BRILHO E <p class="txtCardRedondo">METALIZADOS</p></span>
+                </div>
+                <div class="areaCardRedondo marginLeft">
+                    <img class="imgCardRedondo" src="imagens/iconeBotasWestern.jpg">
+                    <s<span class="inforProduto categoria">BOTAS </span>
+                        <p class="txtCardRedondo">WESTERN</p>
+                </div>
+                <div class="areaCardRedondo marginLeft">
+                    <img class="imgCardRedondo" src="imagens/iconeSneakers.jpg">
+                    <s<span class="inforProduto categoria">SNEAKERS</span>
+                </div>
+                <div class="areaCardRedondo  marginLeft">
+                    <img class="imgCardRedondo" src="imagens/iconeShows.jpg">
+                    <s<span class="inforProduto categoria">SHOW<p class="txtCardRedondo">FESTIVAIS</p></span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- card mais largo (beleza e  cuidade pessoal) -->
+        <div class="card mrgBaixo">
+            <div class="txt">
+                <p class="tituloCentro melhorDaSemana">BELEZA E CUIDADO
+                    PESSOAL &#128155;</p>
+            </div>
+            <div class="areaProduto centralizarConteudo">
+                <div class="cardsMedio maisLargo">
+                    <div class="imgCardMedio">
+                        <img class="imgMedidasCardMedio imgCardLargo" src="imagens/potsCasacos1.jpg">
+                        <span class="inforProduto descoMarca descoBElezaCuidado">ATÉ
+                            50% OFF</span>
+                    </div>
+                </div>
+                <div class="cardsMedio maisLargo">
+                    <div class="imgCardMedio">
+                        <img class="imgMedidasCardMedio imgCardLargo" src="imagens/postCalcados2.jpg">
+                        <span class="inforProduto descoMarca descoBElezaCuidado">ATÉ
+                            50% OFF</span>
+                    </div>
+                </div>
+                <div class="cardsMedio maisLargo">
+                    <div class="imgCardMedio">
+                        <img class="imgMedidasCardMedio imgCardLargo" src="imagens/postLookinhos.jpg">
+                        <span class="inforProduto descoMarca descoBElezaCuidado txtLookinhos">A
+                            PARTIR DE R$19,90</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- card redondo melhores marcas -->
+        <div class="card mrgBaixo">
+            <div class="txt txtMelhoresMarcas">
+                <p>MELHORES MARCAS PARA VOCÊ COMPRAR</p>
+            </div>
+            <div class="areaProduto centralizarConteudo">
+                <div class="areaCardRedondo marginLeft">
+                    <img class="imgCardRedondo" src="imagens/iconeLogotipoMercadoLivre.jpg">
+                </div>
+                <div class="areaCardRedondo marginLeft">
+                    <img class="imgCardRedondo" src="imagens/iconeLogotipoVivara.jpg">
+                </div>
+                <div class="areaCardRedondo marginLeft">
+                    <img class="imgCardRedondo" src="imagens/iconeLogotipoHering.jpg">
+                </div>
+                <div class="areaCardRedondo marginLeft">
+                    <img class="imgCardRedondo" src="imagens/iconeLogotipoOhmybag.jpg">
+                </div>
+                <div class="areaCardRedondo marginLeft">
+                    <img class="imgCardRedondo" src="imagens/iconeLogotipoMonteCarlo.jpg">
+                </div>
+                <div class="areaCardRedondo marginLeft">
+                    <img class="imgCardRedondo" src="imagens/iconeLogotipoInsider.jpg">
+                </div>
+                <div class="areaCardRedondo marginLeft">
+                    <img class="imgCardRedondo" src="imagens/iconeLogotipoNike.jpg">
+                </div>
+                <div class="areaCardRedondo  marginLeft">
+                    <img class="imgCardRedondo" src="imagens/iconeLogotipoOlympikus.jpg">
+                </div>
+            </div>
+        </div>
+
+        <!-- post médio (look internacionais) -->
+        <div class="card margemBtm">
+            <img class="imgPostPadrao" src="imagens/postLooksInternacionais.jpg">
+        </div>
+
+        <!-- Botão das odfertas -->
+        <div class="margemLado margemBtm">
+            <a href="https://www.mercadolivre.com.br/ofertas#nav-header" target="_blank">
+                <button class="btnOferta todasAsOfertas">Ver todas as
+                    Ofertas</button></a>
+        </div>
+
+        <!-- post largo ( duas imagens) -->
+        <div class="card margemBtn">
+            <div class="area margemBtm">
+                <img src="imagens/garantaSeuLook.jpg" class="imgEntregaFull">
+                <img src="imagens/fullCompreEReceba.jpg" class="imgEntregaFull">
+            </div>
+        </div>
+
+        <!-- post médio (Flamengo) -->
+        <div class="card margemBtm">
+            <img class="imgPostPadrao" src="imagens/postMelhorDoFlamengo.jpg">
+            <p class="areaTxt">Frete grátis dependerá do preço, peso e
+                distância do envio do pedido, conforme as
+                condições e
+                limitações da oferta de frete grátis, disponível em
+                mercadolivre.com.br/lfretegratis. "Entrega em até 24
+                horas, válida para
+                compras feitas nos dias úteis até as 14h, para as
+                capitais de SP, RJ, MG, PR e RS na modalidade "Full".
+                Consulte as condições em
+                mercadolivre.com.br/lenvios-full.
+                **Envio mais Rápido do Brasil: Análise comparativa
+                independente, baseada em cálculo da média dos prazos de
+                entrega ofertados durante o período 26/08/2021 e
+                02/09/2021. **"Beba com moderação. Proibida a venda de
+                bebidas alcoólicas para menores de idade,
+                conforme
+                lei nº 8069/90, art 81, inciso Il (Estatuto da Criança e
+                do Adolescente). 'Comparado ao preço da tabela
+                FIPE
+                e em anúncios selecionados. O Mercado Livre não se
+                responsabiliza pelos preços praticados pelos
+                vendedores
+                em
+                seus anúncios.</p>
+        </div>
+
+        <!-- Botão de mais informações -->
+        <div class="margemLado margemAbaixo">
+            <button class="btnOferta todasAsOfertas" id="btbInfor"><span id="txtFormatacao">Mais
+                    informações</span></button>
+        </div>
+
+        <!-- dados do mercado livre -->
+        <div class="barraCard  margemAbaixo corFundoInfor">
+            <div class="areaInformacoes">
+                <div class="localTxt">
+                    <span class="txtInfor">Trabalhe Conosco</span>
+                    <span class="txtInfor">Termos e condições</span>
+                    <span class="txtInfor imgAcessibilidade"> Como
+                        cuidamos da sua privacidade</span>
+                    <span class="txtInfor">Contato</span>
+                    <span class="txtInfor">Informações sobre seguros</span>
+                    <div class="dadosMeli">
+                        <p class="txtInfor inforAbaixo">Copyright ©
+                            1999-2023 Ebazar.com.br LTDA.</p>
+                        <p class="txtInfor inforAbaixo">CNPJ n.º
+                            03.007.331/0001-41 / Av. das Nações Unidas,
+                            nº 3.003,
+                            Bonfim, Osasco/SP - CEP 06233-903 - empresa
+                            do grupo Mercado Livre.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
