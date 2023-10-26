@@ -1,5 +1,5 @@
 # Clone do site do Mercado Livre. 🛒 
-<p align="justify">Este projeto tem como objetivo de recriar o site do Mercado Livre utilizando HTML e CSS. Abaixo, segue o link do projeto e a pasta de imagens do site em que ele foi baseado. Também estão incluídas algumas das imagens do site do Mercado Livre que servem de referência para o projeto.</p>
+<p align="justify">Este projeto tem como objetivo de recriar o site do Mercado Livre utilizando HTML e CSS. Abaixo, segue o link do projeto e a pasta das imagens do site em que ele foi baseado. Também estão incluídas algumas das imagens do site do Mercado Livre que servem de referência para o projeto.</p>
 
 <div>
   <h3>Imagens do projeto final</h3>
